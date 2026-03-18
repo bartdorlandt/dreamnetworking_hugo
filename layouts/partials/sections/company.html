@@ -1,0 +1,62 @@
+{{ $c := .Site.Params.company }}
+{{ if $c.enable | default false }}
+<section id="company">
+
+  {{/* Hero band — dark background with pattern */}}
+  <div class="company-hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <p class="company-tagline">{{ $c.tagline }}</p>
+          {{ with $c.slogan }}
+          <blockquote class="company-slogan">{{ . }}</blockquote>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{/* Content area — white */}}
+  <div class="company-content py-5">
+  <div class="container">
+
+    {{/* Keyword-left / text-right sections */}}
+    <div class="row justify-content-center">
+      <div class="col-lg-11">
+        {{ range $c.sections }}
+        <div class="row company-section mb-4">
+          <div class="col-lg-3 col-md-4 company-label">
+            <span>{{ .label }}</span>
+          </div>
+          <div class="col-lg-7 col-md-7 company-text">
+            {{ .text | markdownify }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* What we do — 3-card grid */}}
+    {{ if $c.services }}
+    <div class="row mt-5 justify-content-center">
+      <!-- <div class="col-12 text-center mb-4">
+        <h4 class="company-services-title">What we do</h4>
+      </div> -->
+      {{ range $c.services }}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="company-service-card h-100 p-4">
+          <div class="company-service-icon mb-3">
+            <i class="{{ .icon }}"></i>
+          </div>
+          <h5 class="company-service-title">{{ .title }}</h5>
+          <p class="company-service-text">{{ .text }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+  </div>
+  </div><!-- /.company-content -->
+</section>
+{{ end }}

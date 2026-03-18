@@ -1,0 +1,39 @@
+{{ $posts := where .Site.RegularPages "Type" "blogs" }}
+{{ $posts = first 3 $posts }}
+
+{{ if $posts }}
+<section id="blog-preview">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-4">
+        <h2>Latest from the Blog</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{ range $posts }}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h3 class="card-title h5">{{ .Title }}</h3>
+            <p class="card-text small">
+              <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+            </p>
+            {{ with .Summary }}
+            <p class="card-text">{{ . | plainify | truncate 120 }}</p>
+            {{ end }}
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="{{ .Permalink }}" class="btn btn-primary btn-sm">Read more</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="row">
+      <div class="col-12 text-center mt-2">
+        <a href="/blogs" class="btn btn-outline-light">All Posts</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

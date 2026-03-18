@@ -1,0 +1,230 @@
+baseURL: "https://new.dreamnetworking.nl/"
+languageCode: "en-us"
+title: "Dream Networking & Automation"
+theme: hugo-profile
+
+# Multilingual configuration
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    contentDir: "content"
+    menu:
+      main:
+        - identifier: home
+          name: Home
+          url: /
+          weight: 1
+        - identifier: contact
+          name: Contact
+          url: /#contact
+          weight: 2
+        - identifier: blog
+          name: Blog
+          title: Blog posts
+          url: /blogs
+          weight: 3
+        - identifier: speaker
+          name: Public Speaking
+          url: /speaker
+          weight: 4
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 9
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: ""
+  description: "Dream Networking & Automation — connecting people and automating workflows"
+  favicon: "/images/Favicon_blue.png"
+
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  theme:
+    disableThemeToggle: true
+    defaultTheme: "light"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  # DNA Brand colors
+  color:
+    textColor: "#01038A"
+    secondaryTextColor: "#0085FC"
+    textLinkColor: "#0085FC"
+    backgroundColor: "#FFFFFF"
+    secondaryBackgroundColor: "#F0F4FF"
+    primaryColor: "#0085FC"
+    secondaryColor: "#FFFFFF"
+
+  navbar:
+    align: ms-auto
+    brandLogo: "/images/Dream_logo.svg"
+    brandName: ""
+    showBrandLogo: true
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
+
+  # Hero — disabled
+  hero:
+    enable: false
+
+  # Company section (replaces about — rendered by layouts/partials/sections/company.html)
+  company:
+    enable: true
+    tagline: "Transforming business connectivity through smart automation and seamless networking solutions. We make complex networks simple, efficient, and future-ready."
+    slogan: "There must be a better way"
+    sections:
+      - label: "The Challenge"
+        text: |-
+          Modern networks are scaling faster than the teams managing them —
+          yet most still rely on manual processes, with human error driving
+          around 80% of outages.
+
+          Multi-vendor complexity, siloed teams, and
+          the NetOps/DevOps gap make automation hard to get right. Many organisations
+          know they need to change, but stall on complexity, unclear ROI,
+          and lack of skills.
+      - label: "Our Approach"
+        text: |-
+          Dream Networking and Automation turns your network automation
+          challenges into strategic advantages.
+
+          We combine hands-on technical
+          expertise with a focus on knowledge sharing — designing solutions
+          that not only improve efficiency and security, but also empower your
+          team to grow and take ownership.
+      - label: "Our Vision"
+        text: |-
+          Service enablement shouldn't be complicated. We simplify complex
+          infrastructure through smart automation, helping businesses operate
+          more efficiently and grow confidently in a digital-first world.
+      - label: "Why Work With Us"
+        text: |-
+          Great automation isn't just about technology — it's about people.
+
+          Dream Networking and Automation takes the time to understand your challenges,
+          your team, and your culture before touching a single line of code. The result:
+          solutions that stick, teams that grow, and businesses that move with confidence.
+    services:
+      - title: "Network Automation"
+        icon: "fas fa-gears"
+        text: "We design and implement robust network automation solutions that streamline your operations, reduce manual errors, and enhance efficiency across your entire infrastructure."
+      - title: "Infrastructure Design"
+        icon: "fas fa-project-diagram"
+        text: "Building reliable, scalable infrastructure that keeps your business running smoothly while supporting growth and innovation in an ever-changing digital landscape."
+      - title: "Connecting People"
+        icon: "fas fa-people-arrows"
+        text: "We don't just implement solutions - we empower your team with the knowledge and skills needed to maintain and evolve your network infrastructure independently."
+
+  # About — kept for theme compatibility but disabled
+  about:
+    enable: false
+
+  # Disabled sections
+  experience:
+    enable: false
+
+  education:
+    enable: false
+
+  # Achievements
+  achievements:
+    enable: false
+    title: "What we do"
+    items:
+      - title: Network Automation
+        content: We design and implement robust network automation solutions that streamline your operations, reduce manual errors, and enhance efficiency across your entire infrastructure.
+        # url: https://example.com
+        image: /images/achievement.jpg
+      - title: Infrastructure Design
+        content: Building reliable, scalable infrastructure that keeps your business running smoothly while supporting growth and innovation in an ever-changing digital landscape.
+        image: /images/achievement.jpg
+      - title: Knowledge Transfer
+        content: We don't just implement solutions – we empower your team with the knowledge and skills needed to maintain and evolve your network infrastructure independently.
+        # url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievement.jpg
+
+  projects:
+    enable: false
+
+  # Contact
+  contact:
+    enable: true
+    content: "Let us help you streamline your networking and automation."
+    btnName: Mail us
+    # btnLink: mailto:info@dreamnetworking.nl
+    formspree:
+      enable: true
+      formId: mjgaejla
+      emailCaption: "Enter your email address"
+      messageCaption: "Enter your message here"
+      messageRows: 5
+
+  footer:
+    # recentPosts:
+    #   path: "blogs"
+    #   count: 3
+    #   title: Recent Posts
+    #   enable: true
+    #   disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/bartdorlandt/
+      linkedin: https://www.linkedin.com/in/bartdorlandt/
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"

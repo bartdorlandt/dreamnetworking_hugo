@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+tasks:
+  default: task -l --sort none
+
+  build:
+    desc: Build the site
+    cmd: |
+      export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
+      uv run mkdocs build -v --strict -t material
+
+  serve:
+    desc: Serve the site
+    cmd: |
+      open http://localhost:1313/
+      hugo serve --buildDrafts
+
+  new:
+    desc: Create a new post and open it in vscode
+    aliases: [new]
+    cmds:
+      - task: new:blog
+
+  new:blog:
+    desc: Create a new blog post and open it in vscode
+    cmd: |
+      read -p "Filename (without extension): " filename
+      hugo new content/blogs/$filename.md -k blog
+
+  new:podcast:
+    desc: Create a new podcast page
+    cmd: |
+      read -p "Filename (without extension): " filename
+      hugo new content/speaker/$filename.md -k podcast
+
+  new:speaker:
+    desc: Create a new speaker page
+    cmd: |
+      read -p "Filename (without extension): " filename
+      hugo new content/speaker/$filename.md -k speaker

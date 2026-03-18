@@ -1,0 +1,378 @@
+/* ===================================================
+   DNA Brand — custom.css
+   Loaded after theme styles via layouts/partials/head/extensions.html
+   =================================================== */
+
+/* ----- Company section ----- */
+#company {
+    background-color: #FFFFFF;
+    color: #01038A;
+}
+
+/* Hero band: midnight blue + subtle diagonal circuit pattern */
+.company-hero {
+    background-color: #01038A;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%230a14a8' stroke-width='1'%3E%3Cpath d='M0 30 L30 0 M30 60 L60 30 M-10 10 L10 -10 M50 70 L70 50'/%3E%3C/g%3E%3Ccircle cx='30' cy='30' r='2' fill='%230a14a8'/%3E%3Ccircle cx='0' cy='0' r='2' fill='%230a14a8'/%3E%3Ccircle cx='60' cy='0' r='2' fill='%230a14a8'/%3E%3Ccircle cx='0' cy='60' r='2' fill='%230a14a8'/%3E%3Ccircle cx='60' cy='60' r='2' fill='%230a14a8'/%3E%3C/g%3E%3C/svg%3E");
+    padding: 5rem 0 4rem;
+}
+
+/* Tagline — large, white */
+.company-tagline {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #FFFFFF !important;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Slogan blockquote — bright blue accent, white text */
+.company-slogan {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFFFFF !important;
+    border: none;
+    border-left: 4px solid #0085FC;
+    padding: 0.5rem 1.25rem;
+    margin: 0 auto;
+    max-width: 520px;
+    text-align: left;
+    background: rgba(0, 133, 252, 0.12);
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.company-content {
+    background-color: #FFFFFF;
+}
+
+/* Keyword-left / text-right rows */
+.company-section {
+    border-top: 1px solid #e0e6f8;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.company-label {
+    display: flex;
+    align-items: center;
+}
+
+.company-label span {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #0085FC;
+    line-height: 1.2;
+}
+
+.company-text {
+    color: #01038A;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.company-text p {
+    color: #01038A;
+    margin-bottom: 0.75rem;
+}
+
+.company-text ul {
+    color: #01038A;
+    padding-left: 1.2rem;
+}
+
+.company-text li {
+    margin-bottom: 0.4rem;
+}
+
+.company-text strong {
+    color: #01038A;
+}
+
+/* What we do — service cards */
+.company-services-title {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0085FC !important;
+}
+
+.company-service-card {
+    border: 1px solid #e0e6f8;
+    border-radius: 0.5rem;
+    background-color: #FFFFFF;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.company-service-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 133, 252, 0.12);
+    border-color: #0085FC;
+}
+
+.company-service-icon {
+    text-align: center;
+}
+
+.company-service-icon i,
+.company-service-icon svg {
+    font-size: 3rem;
+    width: 3rem;
+    height: 3rem;
+    color: #0085FC;
+}
+
+.company-service-title {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-weight: 600;
+    color: #01038A !important;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.company-service-text {
+    color: #01038A;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
+/* ----- Fonts ----- */
+body {
+    font-family: "Inter", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.primary-font,
+.navbar-brand {
+    font-family: "Josefin Sans", sans-serif !important;
+}
+
+/* ----- Speaker/list card images ----- */
+#list-page .card-img-top {
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* ----- Speaker single page featured image ----- */
+#single .featured-image img {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* ----- Navbar logo size ----- */
+.navbar-brand img {
+    width: auto !important;
+    height: 100px !important;
+}
+
+/* ----- Section 1: About (Dream) — White bg, Midnight Blue text ----- */
+#about {
+    background-color: #FFFFFF !important;
+    color: #01038A !important;
+}
+
+#about h1,
+#about h2,
+#about h3,
+#about h4,
+#about h5,
+#about h6,
+#about p,
+#about .content h1,
+#about .content h2,
+#about .content h3 {
+    color: #01038A !important;
+}
+
+/* ----- Achievements — White bg, Midnight Blue text ----- */
+#achievements {
+    background-color: #0085FC !important;
+    color: #FFFFFF !important;
+}
+#achievements h1,
+#achievements h2,
+#achievements p,
+#achievements .container h3 {
+    color: #FFFFFF !important;
+}
+
+/* ----- Section 2: Blog Preview — Midnight Blue bg, white text ----- */
+#blog-preview {
+    background-color: #01038A !important;
+    color: #FFFFFF !important;
+    padding: 4rem 0;
+}
+
+#blog-preview h2,
+#blog-preview h3,
+#blog-preview p,
+#blog-preview a {
+    color: #FFFFFF !important;
+}
+
+#blog-preview a:hover {
+    color: #0085FC !important;
+}
+
+#blog-preview .card {
+    background-color: #0a0f6b !important;
+    border: 1px solid #0085FC !important;
+    color: #FFFFFF !important;
+}
+
+#blog-preview .card-title,
+#blog-preview .card-text {
+    color: #FFFFFF !important;
+}
+
+#blog-preview .btn-primary {
+    background-color: #0085FC !important;
+    border-color: #0085FC !important;
+    color: #FFFFFF !important;
+}
+
+/* ----- Section 3: Speaker Preview — White bg, Bright Blue accents ----- */
+#speaker-preview {
+    background-color: #FFFFFF !important;
+    color: #01038A !important;
+    padding: 4rem 0;
+}
+
+#speaker-preview h2 {
+    color: #01038A !important;
+}
+
+#speaker-preview h3,
+#speaker-preview .card-title {
+    color: #0085FC !important;
+}
+
+#speaker-preview .card {
+    border: 1px solid #0085FC !important;
+}
+
+#speaker-preview .btn-primary {
+    background-color: #0085FC !important;
+    border-color: #0085FC !important;
+    color: #FFFFFF !important;
+}
+
+/* ----- Section 4: Contact — Bright Blue bg, white text ----- */
+#contact {
+    background-color: #0085FC !important;
+    color: #FFFFFF !important;
+}
+
+#contact h1,
+#contact h2,
+#contact h3,
+#contact p,
+#contact a,
+#contact .container h3 {
+    color: #FFFFFF !important;
+    font-size: 2.2rem !important;
+    font-family: "Josefin Sans", sans-serif !important;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#contact .btn {
+    background-color: #FFFFFF !important;
+    color: #0085FC !important;
+    border-color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+#contact .btn:hover {
+    background-color: #01038A !important;
+    color: #FFFFFF !important;
+    border-color: #01038A !important;
+}
+
+/* ----- Footer — Midnight Blue bg, white text ----- */
+footer {
+    background-color: #01038A !important;
+    color: #FFFFFF !important;
+}
+
+footer a,
+footer p,
+footer h5,
+footer span {
+    color: #FFFFFF !important;
+}
+
+footer a:hover {
+    color: #0085FC !important;
+}
+
+/* ----- Speaker single page — metadata sidebar block ----- */
+.speaker-meta {
+    border: 1px solid #e0e6f8;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    background-color: #f8faff;
+}
+
+.speaker-meta-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.65rem;
+}
+
+.speaker-meta-icon {
+    color: #0085FC;
+    width: 1.1rem;
+    min-width: 1.1rem;
+    margin-right: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.speaker-meta-label {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #01038A;
+    text-transform: capitalize;
+}
+
+.speaker-meta-label a,
+.speaker-meta-item a {
+    color: #0085FC;
+    text-decoration: none;
+}
+
+.speaker-meta-label a:hover,
+.speaker-meta-item a:hover {
+    text-decoration: underline;
+}
+
+.speaker-meta-links-header {
+    margin-top: 0.25rem;
+    margin-bottom: 0.4rem;
+}
+
+.speaker-meta-links {
+    padding-left: 1.7rem;
+    margin-bottom: 0;
+}
+
+.speaker-meta-links li {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.speaker-meta-links a {
+    color: #0085FC;
+    text-decoration: none;
+}
+
+.speaker-meta-links a:hover {
+    text-decoration: underline;
+}

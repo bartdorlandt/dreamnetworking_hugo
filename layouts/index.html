@@ -1,0 +1,19 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Site.Params.description }}">
+<link rel="stylesheet" href="{{ (printf "%scss/index.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
+<!-- fontawesome -->
+<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+{{ end }}
+
+{{ define "title" }}
+{{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+{{- partial "sections/company.html" . -}}
+{{- partial "sections/achievements.html" . -}}
+{{- partial "sections/experience.html" . -}}
+<!-- {{- partial "sections/blog-preview.html" . -}} -->
+<!-- {{- partial "sections/speaker-preview.html" . -}} -->
+{{- partial "sections/contact.html" . -}}
+{{ end }}
