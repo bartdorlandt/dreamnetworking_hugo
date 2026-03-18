@@ -51,6 +51,11 @@ markup:
     renderer:
       unsafe: true
 
+security:
+  funcs:
+    getenv:
+      - ^VERCEL_
+
 params:
   title: ""
   description: "Dream Networking & Automation — connecting people and automating workflows"
