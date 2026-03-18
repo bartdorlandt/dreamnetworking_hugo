@@ -85,7 +85,7 @@ params:
     brandLogo: "/images/Dream_logo.svg"
     brandName: ""
     showBrandLogo: true
-    disableSearch: true
+    disableSearch: false
     stickyNavBar:
       enable: true
       showOnScrollUp: true
