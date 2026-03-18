@@ -31,6 +31,7 @@
     font-family: "Josefin Sans", sans-serif !important;
     font-size: 1.8rem;
     font-weight: 700;
+    font-style: italic;
     color: #FFFFFF !important;
     border: none;
     border-left: 4px solid #0085FC;
@@ -169,6 +170,12 @@ h1, h2, h3, h4, h5, h6,
 .navbar-brand img {
     width: auto !important;
     height: 100px !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 48px !important;
+    }
 }
 
 /* ----- Section 1: About (Dream) — White bg, Midnight Blue text ----- */
