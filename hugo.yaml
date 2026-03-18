@@ -112,6 +112,8 @@ params:
     enable: true
     tagline: "Transforming business connectivity through smart automation and seamless networking solutions. We make complex networks simple, efficient, and future-ready."
     slogan: "There must be a better way"
+    coc: "89445325"
+    tax: "NL864985277B01"
     sections:
       - label: "The Challenge"
         text: |-
@@ -209,6 +211,9 @@ params:
     socialNetworks:
       github: https://github.com/bartdorlandt/
       linkedin: https://www.linkedin.com/in/bartdorlandt/
+    terms:
+      name: "Terms and Conditions"
+      path: "/terms/"
 
   listPages:
     disableFeaturedImage: false

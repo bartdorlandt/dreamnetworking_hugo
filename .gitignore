@@ -3,3 +3,4 @@
 /resources/
 *.old
 .hugo_build.lock
+/todo*
