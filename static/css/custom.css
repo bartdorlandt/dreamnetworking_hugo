@@ -376,3 +376,17 @@ footer a:hover {
 .speaker-meta-links a:hover {
     text-decoration: underline;
 }
+
+/* ----- Search results dropdown ----- */
+#search-content {
+    font-size: 0.93rem;
+}
+
+#search-content h5 {
+    font-size: 1.0rem;
+    margin-bottom: 0.25rem;
+}
+
+#search-content .card {
+    margin-bottom: 0.5rem;
+}
