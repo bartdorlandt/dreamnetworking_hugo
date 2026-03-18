@@ -8,8 +8,7 @@ tasks:
   build:
     desc: Build the site
     cmd: |
-      export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
-      uv run mkdocs build -v --strict -t material
+      hugo build
 
   serve:
     desc: Serve the site
