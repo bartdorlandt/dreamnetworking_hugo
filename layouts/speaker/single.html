@@ -1,0 +1,129 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Params.description }}">
+<link rel="stylesheet" href="{{ (printf "%scss/single.css" (.Site.Params.staticPath | default "")) | relURL }}">
+<!-- fontawesome -->
+<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+{{ end }}
+
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">{{ .Title }}</h1>
+            <div class="text-center">
+              {{ .Date | time.Format (":date_medium" | default "Jan 2, 2006") }}
+            </div>
+          </div>
+          {{ if .Params.image }}
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
+          </div>
+          {{ end }}
+          <article class="page-content p-2">
+          {{ .Content | emojify }}
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+
+          {{/* Speaker metadata block */}}
+          <aside class="speaker-meta mb-4">
+            {{ if .Params.speakerType }}
+            <div class="speaker-meta-item">
+              {{ if eq .Params.speakerType "podcast" }}
+              <i class="fas fa-podcast speaker-meta-icon"></i>
+              {{ else }}
+              <i class="fas fa-person-chalkboard speaker-meta-icon"></i>
+              {{ end }}
+              <span class="speaker-meta-label">{{ .Params.speakerType | title }}</span>
+            </div>
+            {{ end }}
+            {{ if .Params.location }}
+            <div class="speaker-meta-item">
+              <i class="fas fa-location-dot speaker-meta-icon"></i>
+              {{ if .Params.locationUrl }}
+              <a href="{{ .Params.locationUrl }}" target="_blank" class="speaker-meta-label">{{ .Params.location }}</a>
+              {{ else }}
+              <span class="speaker-meta-label">{{ .Params.location }}</span>
+              {{ end }}
+            </div>
+            {{ end }}
+            {{ if .Params.links }}
+            <div class="speaker-meta-item speaker-meta-links-header">
+              <i class="fas fa-link speaker-meta-icon"></i>
+              <span class="speaker-meta-label">Links</span>
+            </div>
+            <ul class="speaker-meta-links list-unstyled">
+              {{ range .Params.links }}
+              <li><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </aside>
+
+          {{ if .Params.tags }}
+          <aside class="tags">
+            <h5>{{ .Site.Params.terms.tags | default (i18n "tags") }}</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              {{range .Params.tags}}
+              {{ $tagURL := printf "tags/%s" (. | urlize) }}
+              <li class="list-inline-item"><a href="{{ $tagURL | relLangURL }}"
+                {{ if site.Params.singlePages.tags.openInNewTab | default true }}target="_blank"{{ end }}
+              >{{.}}</a></li>
+              {{end}}
+            </ul>
+          </aside>
+          {{end}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+{{ if or (.Site.Params.singlePages.scrollprogress.enable | default true) (.Params.enableScrollProgress) }}
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<script src="{{ (printf "%sjs/scrollProgressBar.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+{{ end }}
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar = {{ .Site.Params.navbar.stickyNavBar.enable | default false }};
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+{{ end }}

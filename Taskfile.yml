@@ -8,7 +8,7 @@ tasks:
   build:
     desc: Build the site
     cmd: |
-      hugo build
+      hugo --gc
 
   serve:
     desc: Serve the site
