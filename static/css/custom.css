@@ -319,6 +319,11 @@ footer a:hover {
     color: #0085FC !important;
 }
 
+footer .terms-link,
+footer .terms-link:hover {
+    color: #0085FC !important;
+}
+
 /* ----- Speaker single page — metadata sidebar block ----- */
 .speaker-meta {
     border: 1px solid #e0e6f8;
