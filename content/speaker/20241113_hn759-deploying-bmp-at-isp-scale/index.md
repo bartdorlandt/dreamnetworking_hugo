@@ -4,7 +4,7 @@ date: 2024-11-13
 speakerType: podcast
 location: "Packet Pushers - Heavy Networking"
 locationUrl: "https://packetpushers.net/podcasts/heavy-networking/hn-759-deploying-the-bgp-monitoring-protocol-bmp-at-isp-scale/"
-image: "/speaker/hn759-deploying-bmp-at-isp-scale/images/hn759-artwork.png"
+image: "/speaker/20241113_hn759-deploying-bmp-at-isp-scale/images/hn759-artwork.png"
 links:
   - name: Episode page
     url: "https://packetpushers.net/podcasts/heavy-networking/hn-759-deploying-the-bgp-monitoring-protocol-bmp-at-isp-scale/"

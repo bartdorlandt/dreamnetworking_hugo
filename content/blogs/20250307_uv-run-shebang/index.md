@@ -2,7 +2,7 @@
 title: "Improved shebang for your python standalone script"
 date: 2025-03-07
 description: "Set up the shebang for your script using uv run"
-image: "/blogs/uv_run_shebang/images/uv_shebang.png"
+image: "/blogs/20250307_uv-run-shebang/images/uv_shebang.png"
 tags:
   - uv
   - python

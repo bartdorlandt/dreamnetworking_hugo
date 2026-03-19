@@ -4,7 +4,7 @@ date: 2025-03-06
 speakerType: presentation
 location: "DKNOG15"
 locationUrl: "https://events.dknog.dk/event/32/"
-image: "/speaker/tale-of-two-henrys-and-bmp/images/dknog.png"
+image: "/speaker/20250306_tale-of-two-henrys-and-bmp/images/dknog.png"
 links:
   - name: Video
     url: "https://youtu.be/e3OhlqFvwJg?si=JGmz8ATHulvWx-f5"

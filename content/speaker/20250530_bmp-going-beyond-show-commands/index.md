@@ -4,7 +4,7 @@ date: 2025-05-30
 speakerType: presentation
 location: "Autocon3"
 locationUrl: "https://networkautomation.forum/autocon3/"
-image: "/speaker/bmp-going-beyond-show-commands/images/autocon3.png"
+image: "/speaker/20250530_bmp-going-beyond-show-commands/images/autocon3.png"
 links:
   - name: Video
     url: "https://youtu.be/MgK2YSfTvD8"

@@ -4,7 +4,7 @@ date: 2025-03-27
 speakerType: presentation
 location: "Py.Amsterdam"
 locationUrl: "https://py.amsterdam/"
-image: "/speaker/convert-poetry-to-uv-lightning/images/poetry2uv.png"
+image: "/speaker/20250327_convert-poetry-to-uv-lightning/images/poetry2uv.png"
 links:
   - name: Meetup
     url: "https://www.meetup.com/pyamsterdam/events/306556782/"

@@ -4,7 +4,7 @@ date: 2025-06-04
 speakerType: podcast
 location: "Packet Pushers - Network Automation Nerds"
 locationUrl: "https://packetpushers.net/podcasts/network-automation-nerds/nan093-network-automation-there-must-be-a-better-way/"
-image: "/speaker/nan093-there-must-be-a-better-way/images/nan093-artwork.png"
+image: "/speaker/20250604_nan093-there-must-be-a-better-way/images/nan093-artwork.png"
 links:
   - name: Episode page
     url: "https://packetpushers.net/podcasts/network-automation-nerds/nan093-network-automation-there-must-be-a-better-way/"

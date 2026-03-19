@@ -2,7 +2,7 @@
 title: "Taskfile magic with docker[-]compose"
 date: 2025-06-13
 description: "Taskfile magic with docker compose"
-image: "/blogs/dockercompose/images/taskfile_magic_docker.png"
+image: "/blogs/20250613_dockercompose/images/taskfile_magic_docker.png"
 tags:
   - taskfile
   - docker-compose

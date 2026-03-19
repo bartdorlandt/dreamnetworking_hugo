@@ -4,7 +4,7 @@ date: 2024-09-17
 speakerType: presentation
 location: "PyUtrecht"
 locationUrl: "https://www.meetup.com/pyutrecht/"
-image: "/speaker/repos-are-like-children-pyutrecht-2024/images/pyutrecht2024.png"
+image: "/speaker/20240917_repos-are-like-children-pyutrecht/images/pyutrecht2024.png"
 links:
   - name: Video
     url: "https://drive.google.com/file/d/1XomrwxB4OdmknrYf6MasjhGxZJgJEYNO/view"

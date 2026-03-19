@@ -2,7 +2,7 @@
 title: "Pypi Trusted Publisher Management and pitfalls"
 date: 2025-01-07
 description: "Using pypi trusted publisher management and OIDC to push builds to pypi. Some pitfalls to avoid."
-image: "/blogs/pypi_tpm_pitfalls/images/pypi_tpm_image.png"
+image: "/blogs/20250107_pypi-tpm-pitfalls/images/pypi_tpm_image.png"
 tags:
   - pypi
   - python
