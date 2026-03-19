@@ -26,6 +26,12 @@
     margin-bottom: 1.5rem;
 }
 
+@media (max-width: 768px) {
+    .company-tagline {
+        font-size: 1.4rem;
+    }
+}
+
 /* Slogan blockquote — bright blue accent, white text */
 .company-slogan {
     font-family: "Josefin Sans", sans-serif !important;
@@ -35,12 +41,18 @@
     color: #FFFFFF !important;
     border: none;
     border-left: 4px solid #0085FC;
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem 3.1rem;
     margin: 0 auto;
     max-width: 520px;
     text-align: left;
     background: rgba(0, 133, 252, 0.12);
     border-radius: 0 0.25rem 0.25rem 0;
+}
+
+@media (max-width: 768px) {
+    .company-slogan {
+        font-size: 1.2rem;
+    }
 }
 
 .company-content {

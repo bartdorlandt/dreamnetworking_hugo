@@ -2,7 +2,7 @@
 title: "Pydantic series"
 date: 2025-08-29
 description: "Pydantic series"
-image: "/blogs/pydantic/images/top.png"
+image: "/blogs/20250829_pydantic/images/top.png"
 tags:
   - pydantic
   - validation

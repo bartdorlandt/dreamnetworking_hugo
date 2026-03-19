@@ -2,13 +2,50 @@
 
 version: "3"
 
+vars:
+  date:
+    sh: date -u +"%Y%m%d"
+
 tasks:
-  default: task -l --sort none
+  default: task -l
+  
+  b:
+    desc: bart
+    cmd: echo {{.date}}
+  
+  init:
+    desc: Initialize the project
+    cmds:
+      - task: init:hugo
+      - task: init:git
+
+  init:hugo:
+    desc: Install hugo
+    status:
+      - test -f /opt/homebrew/bin/hugo
+    platforms:
+      - darwin
+    cmds: 
+      - brew install hugo
+
+  init:git:
+    desc: Init git submodule and update
+    status:
+      - test -d themes/hugo-profile/.github
+    cmds:
+      - git submodule update --init --recursive
+
+  git:update:
+    desc: Update git repository
+    aliases:
+      - update
+    cmds:
+      - git pull --recurse-submodules=yes
 
   build:
     desc: Build the site
-    cmd: |
-      hugo --gc
+    cmds:
+      - hugo --gc
 
   serve:
     desc: Serve the site
@@ -16,26 +53,36 @@ tasks:
       open http://localhost:1313/
       hugo serve --buildDrafts
 
-  new:
-    desc: Create a new post and open it in vscode
-    aliases: [new]
-    cmds:
-      - task: new:blog
+  # new:
+  #   desc: Create a new post and open it in vscode
+  #   aliases: [new]
+  #   cmds:
+  #     - task: new:blog
 
   new:blog:
     desc: Create a new blog post and open it in vscode
+    aliases: [new]
+    vars:
+      p: blogs
     cmd: |
-      read -p "Filename (without extension): " filename
-      hugo new content/blogs/$filename.md -k blog
+      read -p "Dirname (use '-' instead of spaces): " directory_name
+      hugo new content/{{.p}}/{{.date}}_$directory_name/index.md -k blog
+      mkdir -p content/{{.p}}/{{.date}}_$directory_name/images
 
   new:podcast:
     desc: Create a new podcast page
+    vars:
+      p: speaker
     cmd: |
-      read -p "Filename (without extension): " filename
-      hugo new content/speaker/$filename.md -k podcast
+      read -p "Dirname (use '-' instead of spaces): " directory_name
+      hugo new content/{{.p}}/{{.date}}_$directory_name/index.md -k podcast
+      mkdir -p content/{{.p}}/{{.date}}_$directory_name/images
 
   new:speaker:
     desc: Create a new speaker page
+    vars:
+      p: speaker
     cmd: |
-      read -p "Filename (without extension): " filename
-      hugo new content/speaker/$filename.md -k speaker
+      read -p "Dirname (use '-' instead of spaces): " directory_name
+      hugo new content/{{.p}}/{{.date}}_$directory_name/index.md -k speaker
+      mkdir -p content/{{.p}}/{{.date}}_$directory_name/images

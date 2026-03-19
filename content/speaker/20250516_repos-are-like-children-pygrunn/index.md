@@ -4,7 +4,7 @@ date: 2025-05-16
 speakerType: presentation
 location: "PyGrunn"
 locationUrl: "https://pygrunn.org/"
-image: "/speaker/repos-are-like-children-pygrunn-2025/images/pygrunn.png"
+image: "/speaker/20250516_repos-are-like-children-pygrunn/images/pygrunn.png"
 links:
   - name: Video
     url: "https://www.youtube.com/watch?v=Kc8fDYP5cJU"

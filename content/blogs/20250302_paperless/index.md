@@ -2,7 +2,7 @@
 title: "Paperless"
 date: 2025-03-02
 description: "Paperless is awesome and even better with some automation."
-image: "/blogs/paperless/images/paperless.png"
+image: "/blogs/20250302_paperless/images/paperless.png"
 tags:
   - paperless
   - shortcuts

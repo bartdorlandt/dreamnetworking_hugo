@@ -1,15 +1,12 @@
 ---
 title: "Contact form made simple"
 date: 2025-01-06
-description: "Today I ran into a service that allows you to create a contact form without having to write a bunch of code. Making it really easy to incorporate it in your mkdocs website."
 tags:
   - website
   - un-static
-image: "/blogs/unstatic_form/images/unstatic_form.png"
+image: "/blogs/20250106_unstatic-form/images/unstatic_form.png"
 ---
 Today I ran into a service that allows you to create a contact form without having to write a bunch of code. Making it really easy to incorporate it in your mkdocs website.
-
-<!--more-->
 
 ## Un-static forms
 

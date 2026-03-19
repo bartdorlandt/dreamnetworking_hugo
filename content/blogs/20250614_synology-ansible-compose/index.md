@@ -2,7 +2,7 @@
 title: "Managing dockers using ansible on Synology NAS"
 date: 2025-06-14
 description: "How I use ansible to manage docker compose on my Synology NAS"
-image: "/blogs/synology_ansible_compose/images/ansible_docker_synology.png"
+image: "/blogs/20250614_synology-ansible-compose/images/ansible_docker_synology.png"
 tags:
   - ansible
   - docker-compose
