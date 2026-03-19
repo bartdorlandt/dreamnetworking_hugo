@@ -2,7 +2,7 @@
   "framework": "hugo",
   "build": {
     "env": {
-      "HUGO_VERSION": "0.157.0"
+      "HUGO_VERSION": "0.158.0"
     }
   }
 }

@@ -26,6 +26,12 @@
     margin-bottom: 1.5rem;
 }
 
+@media (max-width: 768px) {
+    .company-tagline {
+        font-size: 1.4rem;
+    }
+}
+
 /* Slogan blockquote — bright blue accent, white text */
 .company-slogan {
     font-family: "Josefin Sans", sans-serif !important;

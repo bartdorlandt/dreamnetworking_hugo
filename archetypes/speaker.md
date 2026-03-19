@@ -2,11 +2,10 @@
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = '{{ .Date }}'
 draft = true
-type = "speaker"
 speakerType = "presentation"
 location = ""
 locationUrl = ""
-image = "/images/speaker/{{ replace .File.ContentBaseName "-" "_" | lower }}.png"
+image = "/images/speaker/{{ replace .File.ContentBaseName "-" "_" | lower }}/images/image.png"
 links = [
   { name = "", url = "" }
 ]
