@@ -110,12 +110,12 @@ For the full section below.
     if: startsWith(github.ref, 'refs/tags/') # only publish to PyPI on tag pushes
 ```
 
-* $}, is automatically set. No need to worry about it.
+* ${{ github.token }}, is automatically set. No need to worry about it.
 
 ```markdown
  - name: Create GitHub Release
     env:
-      GITHUB_TOKEN: $}
+      GITHUB_TOKEN: ${{ github.token }}
 ```
 
 * With the upload to pypi successful, a release is created also on github.
@@ -161,7 +161,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: testpypi # (1)!
+      name: testpypi
       url: https://test.pypi.org/p/convert-poetry2uv
 
     permissions:
@@ -182,13 +182,13 @@ jobs:
 
   publish-to-pypi:
     name: Publish Python 🐍 distribution 📦 to PyPI
-    if: startsWith(github.ref, 'refs/tags/') # (3)! only publish to PyPI on tag pushes
+    if: startsWith(github.ref, 'refs/tags/')
     needs:
       - build
     runs-on: ubuntu-latest
 
     environment:
-      name: pypi # (2)!
+      name: pypi
       url: https://pypi.org/p/convert-poetry2uv
 
     permissions:
@@ -229,15 +229,15 @@ jobs:
             ./dist/*.whl
       - name: Create GitHub Release
         env:
-          GITHUB_TOKEN: $} # (4)!
+          GITHUB_TOKEN: ${{ github.token }}
         run: >-
           gh release create
           "$GITHUB_REF_NAME"
           --repo "$GITHUB_REPOSITORY"
           --notes ""
-      - name: Upload artifact signatures to GitHub Release # (5)!
+      - name: Upload artifact signatures to GitHub Release
         env:
-          GITHUB_TOKEN: $}
+          GITHUB_TOKEN: ${{ github.token }}
         # Upload to GitHub Release using the `gh` CLI.
         # `dist/` contains the built packages, and the
         # sigstore-produced signatures and certificates.
@@ -250,8 +250,7 @@ jobs:
 1.    Note the name of the environment, it matches the environment that is configured in the publisher on test.pypi.org.
 2.    Note the name of the environment, it matches the environment that is configured in the publisher on pypi.org.
 3.    Only push to pypi when a new tag is set
-4.    $}, is automatically set. No need to worry about it.
+4.    ${{ github.token }}, is automatically set. No need to worry about it.
 5.    With the upload to pypi successful, a release is created also on github
-
 
 Have fun.

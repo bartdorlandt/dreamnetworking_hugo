@@ -119,12 +119,11 @@
     border: 1px solid #e0e6f8;
     border-radius: 0.5rem;
     background-color: #FFFFFF;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .company-service-card:hover {
-    box-shadow: 0 4px 20px rgba(0, 133, 252, 0.12);
-    border-color: #0085FC;
+    box-shadow: none;
+    border-color: #e0e6f8;
 }
 
 .company-service-icon {
