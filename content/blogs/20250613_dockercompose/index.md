@@ -12,8 +12,6 @@ I have been using [Taskfile](https://taskfile.dev/) for a while now, and I reall
 
 In this post I wanted to share some "magic" to be able to select the right docker compose application to use. Either the older `docker-compose` or the newer `docker compose` command, using the compose plugin.
 
-<!--more-->
-
 I have a `Taskfile.yml` that looks like this that allows me to update running dockers, by finding them using `docker compose ls` and with those entries follow the path and pull the images and restart the containers.
 
 I want to be able to use the same tasks, even though I have to work with a system that still uses the older `docker-compose` command.
@@ -39,11 +37,11 @@ This will allow you to use the `DOCKERCOMPOSE` variable in your tasks, like so:
 ```yaml
 tasks:
   up:
-    dir: "}"
+    dir: "{{.USER_WORKING_DIR}}"
     preconditions:
       - test -f docker-compose.yml
     cmds:
-      - "} } up -d --remove-orphans"
+      - "{{.SUDO}} {{.DOCKERCOMPOSE}} up -d --remove-orphans"
 ```
 
 I have the same kind of logic around `}`. If this environment variable is set, it will use `sudo` to run the command, otherwise it will just run the command without `sudo`. This therefore depends on the system I used it on.
@@ -70,43 +68,43 @@ tasks:
   ### Per project tasks
   up:
     desc: "Start the docker-compose environment"
-    dir: "}"
+    dir: "{{.USER_WORKING_DIR}}"
     preconditions:
       - test -f docker-compose.yml
     cmds:
-      - "} } up -d --remove-orphans"
+      - "{{.SUDO}} {{.DOCKERCOMPOSE}} up -d --remove-orphans"
 
   down:
     desc: "Stop the docker-compose environment"
-    dir: "}"
+    dir: "{{.USER_WORKING_DIR}}"
     preconditions:
-      - test -f }/docker-compose.yml
+      - test -f {{.USER_WORKING_DIR}}/docker-compose.yml
     cmds:
-      - "} } down"
+      - "{{.SUDO}} {{.DOCKERCOMPOSE}} down"
 
   ps:
     desc: "List the containers in the docker-compose environment"
-    dir: "}"
+    dir: "{{.USER_WORKING_DIR}}"
     preconditions:
-      - test -f }/docker-compose.yml
+      - test -f {{.USER_WORKING_DIR}}/docker-compose.yml
     cmds:
-      - "} } ps"
+      - "{{.SUDO}} {{.DOCKERCOMPOSE}} ps"
 
   update:
     desc: "Update the docker-compose environment"
-    dir: "}"
+    dir: "{{.USER_WORKING_DIR}}"
     preconditions:
-      - test -f }/docker-compose.yml
+      - test -f {{.USER_WORKING_DIR}}/docker-compose.yml
     cmds:
-      - "} } pull"
+      - "{{.SUDO}} {{.DOCKERCOMPOSE}} pull"
 
   restart:
     desc: "Restart the docker-compose environment"
-    dir: "}"
+    dir: "{{.USER_WORKING_DIR}}"
     preconditions:
-      - test -f }/docker-compose.yml
+      - test -f {{.USER_WORKING_DIR}}/docker-compose.yml
     cmds:
-      - "} } restart"
+      - "{{.SUDO}} {{.DOCKERCOMPOSE}} restart"
 
   ### Global tasks
   update-all:
@@ -117,14 +115,14 @@ tasks:
       - "[ `uname -n` = nas ]"
     cmd: |
       this_dir=$(pwd)
-      echo "Get running } envs"
-      running=$(} } ls | grep running | awk '')
+      echo "Get running {{.DOCKERCOMPOSE}} envs"
+      running=$({{.SUDO}} {{.DOCKERCOMPOSE}} ls | grep running | awk '{print $1}')
       for x in $running; do
         cd $x
         pwd
         task update
         task up
-        cd $
+        cd ${this_dir}
         echo ""
       done
 
@@ -136,13 +134,13 @@ tasks:
       - "[ `uname -n` = nas ]"
     cmd: |
       this_dir=$(pwd)
-      echo "Get running } envs"
-      running=$(} } ls | grep running | awk '')
+      echo "Get running {{.DOCKERCOMPOSE}} envs"
+      running=$({{.SUDO}} {{.DOCKERCOMPOSE}} ls | grep running | awk '{print $1}')
       for x in $running; do
         cd $x
         pwd
-        } } restart
-        cd $
+        {{.SUDO}} {{.DOCKERCOMPOSE}} restart
+        cd ${this_dir}
         echo ""
       done
 
@@ -150,6 +148,5 @@ tasks:
     desc: "Prune unused docker images"
     interactive: true
     cmds:
-      - "} docker image prune"
-
+      - "{{.SUDO}} docker image prune"
 ```

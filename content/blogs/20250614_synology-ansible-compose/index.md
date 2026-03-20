@@ -12,8 +12,6 @@ Synology NAS devices are great and easy to use devices. The model I use is plent
 
 Managing containers is very well possible using Ansible. Especially when you already use it for different systems and different tasks. Adding a playbook to allow you to update or manage your containers is a no-brainer.
 
-<!--more-->
-
 Let's start with the setup, and leave synology aside for a moment.
 
 I wanted to extend my playbook for updating my servers, including the containers running on them.
@@ -53,11 +51,11 @@ The `roles/docker_compose/tasks/main.yml` looks like this:
 - name: Update dockers
   become: true
   community.docker.docker_compose_v2:
-    docker_cli: "}"
-    project_src: "}"
+    docker_cli: "{{ docker_cli | default(omit) }}"
+    project_src: "{{ item.path }}"
     remove_orphans: true
     state: restarted
-  loop: "}"
+  loop: "{{ dockers }}"
 ```
 
 This tasks will loop over the `dockers` variable, which is defined in the `hostvars`. This will have the paths to the docker compose files that need to be managed.
@@ -91,14 +89,14 @@ In the same role, `roles/docker_compose/tasks/synology.yml`:
 ---
 - name: Create a docker plugins directory
   ansible.builtin.file:
-    path: "}"
+    path: "{{ docker_plugins_path }}"
     state: directory
     mode: "0755"
 
 - name: Download docker compose plugin
   ansible.builtin.get_url:
-    url: https://github.com/docker/compose/releases/download/}/docker-compose-linux-x86_64
-    dest: "}/docker-compose"
+    url: https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-linux-x86_64
+    dest: "{{ docker_plugins_path }}/docker-compose"
     mode: "0755"
 ```
 
@@ -150,39 +148,40 @@ Using Ansible to manage docker containers on a Synology NAS is a great way to au
 ---
 - name: Install dependencies
   ansible.builtin.command:
-    cmd: "}"
-    chdir: "}"
-  loop: "}"
+    cmd: "{{ item.install_command }}"
+    chdir: "{{ item.path }}"
+  loop: "{{ dockers }}"
   when: item.install_command is defined
   register: my_output
   changed_when: my_output.rc != 0 # <- Uses the return code to define when the task has changed.
-  become_user: "}"
+  become_user: "{{ user.name }}"
   become: true
 
 - name: Update dockers
   become: true
   community.docker.docker_compose_v2:
-    docker_cli: "}"
-    project_src: "}"
+    docker_cli: "{{ docker_cli | default(omit) }}"
+    project_src: "{{ item.path }}"
     remove_orphans: true
     state: present
     ignore_build_events: false
-  loop: "}"
+  loop: "{{ dockers }}"
 ```
+
 ### roles/docker_compose/tasks/synology.yml
 
 ```yaml
 ---
 - name: Create a docker plugins directory
   ansible.builtin.file:
-    path: "}"
+    path: "{{ docker_plugins_path }}"
     state: directory
     mode: "0755"
 
 - name: Download docker compose plugin
   ansible.builtin.get_url:
-    url: https://github.com/docker/compose/releases/download/}/docker-compose-linux-x86_64
-    dest: "}/docker-compose"
+    url: https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-linux-x86_64
+    dest: "{{ docker_plugins_path }}/docker-compose"
     mode: "0755"
 ```
 
