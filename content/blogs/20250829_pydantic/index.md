@@ -13,8 +13,6 @@ The "bonus" of also dumping it back into json, is that a diff can be done betwee
 
 This is based on a series that I did on [LinkedIn](https://www.linkedin.com/in/bartdorlandt/).
 
-<!--more-->
-
 ## Basics first
 
 Let's start with some basics.

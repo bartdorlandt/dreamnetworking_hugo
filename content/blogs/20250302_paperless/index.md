@@ -10,8 +10,6 @@ tags:
 ---
 Recently I was helping out some friends with paperless, how to structure their documents, how to implement a flow for their documents, etc. On occasion this triggered me to look at how I use paperless myself. I've been using it for a while now and I'm very happy with it. I've also added some automation to it, which I'll share in this post.
 
-<!--more-->
-
 ## The start
 Getting started with paperless is quite easy. The [documentation](https://docs.paperless-ngx.com/setup/) is good and will get you started quickly. I'm running it in a docker container, which is also described in the documentation. I'm running the `tika` variant with `postgres`. See the [docker-compose.yml](https://github.com/paperless-ngx/paperless-ngx/blob/main/docker/compose/docker-compose.postgres-tika.yml) for the details.
 

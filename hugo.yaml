@@ -50,6 +50,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    style: nord
+    noClasses: true
 
 security:
   funcs:

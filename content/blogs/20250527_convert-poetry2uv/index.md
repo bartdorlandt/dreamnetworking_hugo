@@ -12,8 +12,6 @@ When I encountered #uv I fell for it right away. I was already using ruff for a 
 
 Creating a uv repo is easy, just run `uv init $project` and you are off to the races. Using it for new projects is easy if you are already used to poetry. The commands are quite similar. Just add a few libraries with `uv add $library` or `uv add --dev $library` to make it part of the development group.
 
-<!--more-->
-
 Even loading libraries from your requirements file is easy, `uv add -r requirements.txt`.
 
 Now, you might want to migrate other repositories to have some consistency.  How to migrate your existing repo's to uv. Doing it by hand is just plain annoying and it will be easy to sneak in some errors.
