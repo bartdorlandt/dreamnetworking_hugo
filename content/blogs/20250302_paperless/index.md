@@ -24,13 +24,14 @@ Here are some examples of how I've structured my documents:
 
 Contracts:
 ```jinja
-contracts/}/}/}}}_}
+contracts/{{ created_year }}/{{ correspondent }}/{{ created_year }}{{ created_month }}{{ created_day }}_{{ title }}
 ```
 
 Invoices private:
 ```jinja
-private/invoices/}/}/}}}_}
+private/invoices/{{ created_year }}/{{ correspondent }}/{{ created_year }}{{ created_month }}{{ created_day }}_{{ title }}
 ```
+
 
 ## Algorithms
 
