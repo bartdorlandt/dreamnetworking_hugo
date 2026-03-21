@@ -17,9 +17,9 @@ disableDate: true
   </div>
 </div>
 
-## The person behind the packets
+## The person behind the code
 
-I'm Bart Dorlandt — a network automation architect based in Amersfoort, the Netherlands, and the founder of Dream Networking & Automation. For over twenty years, networks have been more than a profession for me. They're a fascination. From the moment I started pulling cables and chasing routing issues, I was hooked on understanding how things connect — and more importantly, how to make them work better.
+I'm Bart Dorlandt — a network automation architect based in Amersfoort, the Netherlands, and the founder of Dream Networking & Automation. For over twenty years, networks have been more than a profession for me. They're a fascination. From the moment I came in contact with networking during my bachelor studies, I was hooked on understanding how things connect — and more importantly, how to make them work better.
 
 That curiosity took me all the way to CCIE #43200, through years of designing, building, and troubleshooting networks across industries and borders. But somewhere along the way, I started asking a different question: *why are we still doing this by hand?*
 
