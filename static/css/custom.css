@@ -530,3 +530,60 @@ pre:hover .copy-code-btn {
         width: 100%;
     }
 }
+
+/* ----- About page hero: balloon left, photo right ----- */
+.about-hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-hero-photo {
+    flex: 0 0 260px;
+    max-width: 260px;
+}
+
+.about-hero-balloon {
+    flex: 1;
+    position: relative;
+    background-color: #f0f4ff;
+    border-left: 4px solid #0085FC;
+    border-radius: 0 0.75rem 0.75rem 0.75rem;
+    padding: 1.25rem 1.5rem;
+}
+
+.about-hero-balloon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 10px solid #0085FC;
+    transform: translateY(-100%);
+}
+
+.about-hero-balloon span {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #01038A;
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-hero-photo {
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+    }
+}

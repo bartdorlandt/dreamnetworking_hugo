@@ -8,6 +8,15 @@ toc: true
 disableDate: true
 ---
 
+<div class="about-hero">
+  <div class="about-hero-balloon">
+    <span>"There must be a better way"</span>
+  </div>
+  <div class="about-hero-photo">
+    <img src="/bart_profile.png" alt="Bart Dorlandt" style="border-radius:0.5rem; width:100%; height:auto;">
+  </div>
+</div>
+
 ## The person behind the packets
 
 I'm Bart Dorlandt — a network automation architect based in Amersfoort, the Netherlands, and the founder of Dream Networking & Automation. For over twenty years, networks have been more than a profession for me. They're a fascination. From the moment I started pulling cables and chasing routing issues, I was hooked on understanding how things connect — and more importantly, how to make them work better.
