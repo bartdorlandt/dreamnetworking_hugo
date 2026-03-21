@@ -449,3 +449,84 @@ pre:hover .copy-code-btn {
     background-color: #0085FC;
     color: #ffffff;
 }
+
+/* ----- Testimonial balloons ----- */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.testimonial-balloon {
+    position: relative;
+    background-color: #f0f4ff;
+    border-left: 4px solid #0085FC;
+    border-radius: 0 0.75rem 0.75rem 0.75rem;
+    padding: 1rem 1.25rem 0.75rem;
+    max-width: 90%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.testimonial-balloon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 10px solid #0085FC;
+    transform: translateY(-100%);
+}
+
+.testimonial-balloon:nth-child(even) {
+    border-left: none;
+    border-right: 4px solid #01038A;
+    border-radius: 0.75rem 0 0.75rem 0.75rem;
+    background-color: #e8eeff;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.testimonial-balloon:nth-child(even)::before {
+    left: auto;
+    right: -4px;
+    border-left: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #01038A;
+}
+
+.testimonial-balloon:nth-child(even) .testimonial-author {
+    color: #01038A;
+    display: block;
+    text-align: right;
+}
+
+.testimonial-balloon p {
+    margin: 0 0 0.5rem;
+    font-style: italic;
+    color: #01038A;
+}
+
+.testimonial-author {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0085FC;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* ----- NLNAM page image ----- */
+.nlnam-img {
+    height: 480px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .nlnam-img {
+        height: auto;
+        width: 100%;
+    }
+}
