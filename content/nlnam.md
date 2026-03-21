@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div style="text-align:center; margin-bottom:30px;">
-  <img src="/nlnam_bart.jpeg" alt="NLNAM" style="height:480px; width:auto; border-radius:0.5rem;">
+  <img src="/nlnam_bart.jpeg" alt="NLNAM" class="nlnam-img" style="border-radius:0.5rem;">
 </div>
 
 [NLNAM](https://net-auto.nl/) is the NL Network Automation Meetup — a community of network automation enthusiasts of all levels and backgrounds, coming together to share knowledge, experiences, and a good conversation.
