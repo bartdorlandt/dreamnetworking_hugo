@@ -8,11 +8,7 @@ vars:
 
 tasks:
   default: task -l
-  
-  b:
-    desc: bart
-    cmd: echo {{.date}}
-  
+
   init:
     desc: Initialize the project
     cmds:
@@ -25,7 +21,7 @@ tasks:
       - test -f /opt/homebrew/bin/hugo
     platforms:
       - darwin
-    cmds: 
+    cmds:
       - brew install hugo
 
   init:git:
@@ -52,12 +48,6 @@ tasks:
     cmd: |
       open http://localhost:1313/
       hugo serve --buildDrafts
-
-  # new:
-  #   desc: Create a new post and open it in vscode
-  #   aliases: [new]
-  #   cmds:
-  #     - task: new:blog
 
   new:blog:
     desc: Create a new blog post and open it in vscode
