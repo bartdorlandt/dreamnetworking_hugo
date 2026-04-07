@@ -14,7 +14,7 @@ links:
     url: "https://podcasts.apple.com/us/podcast/na009-the-square-table-ai-hype-and-the/id1796167806?i=1000759139089"
   - name: YouTube
     url: "https://youtu.be/3hYYJbFuopA?si=gl85LdsRFOnVaatQ"
-description: "Seven network engineers discuss AI's practical impact: productivity vs. skill atrophy, code quality concerns, and why critical thinking remains essential."
+description: "Nine network engineers discuss AI's practical impact: productivity vs. skill atrophy, code quality concerns, and why critical thinking remains essential."
 tags:
   - network automation
   - podcast
