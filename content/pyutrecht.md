@@ -14,7 +14,7 @@ toc: false
 
 [PyUtrecht](https://www.meetup.com/pyutrecht/) is a Python community meetup in Utrecht — a gathering place for Python enthusiasts of all levels and backgrounds, from beginners exploring the language to seasoned developers pushing its limits.
 
-I co-host PyUtrecht together with [Marcelo Trylesinski](https://www.linkedin.com/in/marcelotrylesinski/), with a shared belief that learning happens best when people come together to share what they're building, what they've broken, and what they've learned along the way.
+I co-host PyUtrecht together with [Marcelo Trylesinski](https://www.linkedin.com/in/marcelotryle/), with a shared belief that learning happens best when people come together to share what they're building, what they've broken, and what they've learned along the way.
 
 Each edition brings together practitioners from different domains — web development, data science, automation, software architecture — for talks, discussion, and community. Whether you're writing your first Python script or your thousandth, there's a place for you here.
 
