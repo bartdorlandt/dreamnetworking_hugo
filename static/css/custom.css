@@ -518,14 +518,16 @@ pre:hover .copy-code-btn {
     font-family: "Josefin Sans", sans-serif;
 }
 
-/* ----- NLNAM page image ----- */
-.nlnam-img {
+/* ----- NLNAM / PyUtrecht page images ----- */
+.nlnam-img,
+.pyutrecht-img {
     height: 480px;
     width: auto;
 }
 
 @media (max-width: 768px) {
-    .nlnam-img {
+    .nlnam-img,
+    .pyutrecht-img {
         height: auto;
         width: 100%;
     }

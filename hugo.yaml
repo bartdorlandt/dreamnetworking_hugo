@@ -1,5 +1,5 @@
 baseURL: "https://dreamnetworking.nl/"
-languageCode: "en-us"
+locale: "en-us"
 title: "Dream Networking & Automation"
 theme: hugo-profile
 
@@ -9,7 +9,7 @@ defaultContentLanguageInSubdir: false
 
 languages:
   en:
-    languageName: "English"
+    label: "English"
     weight: 1
     contentDir: "content"
     menu:
@@ -39,6 +39,10 @@ languages:
           name: NLNAM
           url: /nlnam
           weight: 6
+        - identifier: pyutrecht
+          name: PyUtrecht
+          url: /pyutrecht
+          weight: 7
 
 outputs:
   home:
