@@ -48,31 +48,3 @@ tasks:
     cmd: |
       open http://localhost:1313/
       hugo serve --buildDrafts
-
-  new:blog:
-    desc: Create a new blog post and open it in vscode
-    aliases: [new]
-    vars:
-      p: blogs
-    cmd: |
-      read -p "Dirname (use '-' instead of spaces): " directory_name
-      hugo new content/{{.p}}/{{.date}}_$directory_name/index.md -k blog
-      mkdir -p content/{{.p}}/{{.date}}_$directory_name/images
-
-  new:podcast:
-    desc: Create a new podcast page
-    vars:
-      p: speaker
-    cmd: |
-      read -p "Dirname (use '-' instead of spaces): " directory_name
-      hugo new content/{{.p}}/{{.date}}_$directory_name/index.md -k podcast
-      mkdir -p content/{{.p}}/{{.date}}_$directory_name/images
-
-  new:speaker:
-    desc: Create a new speaker page
-    vars:
-      p: speaker
-    cmd: |
-      read -p "Dirname (use '-' instead of spaces): " directory_name
-      hugo new content/{{.p}}/{{.date}}_$directory_name/index.md -k speaker
-      mkdir -p content/{{.p}}/{{.date}}_$directory_name/images
