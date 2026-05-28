@@ -11,9 +11,9 @@ links:
 description: "Having a project is much like raising a child — a walk through repository lifecycle, tooling, and growing code with confidence."
 tags: [
   "Python",
-  "repositories",
-  "lifecycle",
-  "software development"
+  "Repositories",
+  "Lifecycle",
+  "Software Development"
 ]
 ---
 

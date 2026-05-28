@@ -1,18 +1,18 @@
 ---
-title: "Convert Poetry to uv - lightning"
+title: Convert Poetry to uv - lightning
 date: 2025-03-27
 speakerType: presentation
-location: "Py.Amsterdam"
-locationUrl: "https://py.amsterdam/"
-image: "/speaker/20250327_convert-poetry-to-uv-lightning/images/poetry2uv.png"
+location: Py.Amsterdam
+locationUrl: https://py.amsterdam/
+image: /speaker/20250327_convert-poetry-to-uv-lightning/images/poetry2uv.png
 links:
   - name: Meetup
     url: "https://www.meetup.com/pyamsterdam/events/306556782/"
 description: "5-minute lightning talk sharing findings on migrating from Poetry to uv, and the tool built to automate the conversion."
 tags: [
-  "Python",
-  "Poetry",
-  "uv",
+  Python,
+  Poetry,
+  uv,
 ]
 ---
 

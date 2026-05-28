@@ -1,19 +1,19 @@
 ---
-title: "The Square Table — AI, Hype, and the Future of Network Engineering - Network AutoMagic"
+title: The Square Table — AI, Hype, and the Future of Network Engineering - Network AutoMagic
 date: 2026-04-03
 speakerType: podcast
-location: "Network AutoMagic"
-locationUrl: "https://networkautomagic.net/podcast/na009/"
-image: "/speaker/20260403_na009-ai-hype-future-of-network-engineering/images/na009-artwork.png"
+location: Network AutoMagic
+locationUrl: https://networkautomagic.net/podcast/na009/
+image: /speaker/20260403_na009-ai-hype-future-of-network-engineering/images/na009-artwork.png
 links:
   - name: Episode page
-    url: "https://networkautomagic.net/podcast/na009/"
+    url: https://networkautomagic.net/podcast/na009/
   - name: Spotify
-    url: "https://open.spotify.com/episode/11GZnQkeSVaMhSedkXy9my"
+    url: https://open.spotify.com/episode/11GZnQkeSVaMhSedkXy9my
   - name: Apple Podcasts
-    url: "https://podcasts.apple.com/us/podcast/na009-the-square-table-ai-hype-and-the/id1796167806?i=1000759139089"
+    url: https://podcasts.apple.com/us/podcast/na009-the-square-table-ai-hype-and-the/id1796167806?i=1000759139089
   - name: YouTube
-    url: "https://youtu.be/3hYYJbFuopA?si=gl85LdsRFOnVaatQ"
+    url: https://youtu.be/3hYYJbFuopA?si=gl85LdsRFOnVaatQ
 description: "Nine network engineers discuss AI's practical impact: productivity vs. skill atrophy, code quality concerns, and why critical thinking remains essential."
 tags:
   - network automation

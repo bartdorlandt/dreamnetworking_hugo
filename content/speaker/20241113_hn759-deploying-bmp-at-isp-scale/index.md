@@ -1,29 +1,29 @@
 ---
-title: "Deploying the BGP Monitoring Protocol (BMP) at ISP Scale"
+title: Deploying the BGP Monitoring Protocol (BMP) at ISP Scale
 date: 2024-11-13
 speakerType: podcast
-location: "Packet Pushers - Heavy Networking"
-locationUrl: "https://packetpushers.net/podcasts/heavy-networking/hn-759-deploying-the-bgp-monitoring-protocol-bmp-at-isp-scale/"
-image: "/speaker/20241113_hn759-deploying-bmp-at-isp-scale/images/hn759-artwork.png"
+location: Packet Pushers - Heavy Networking
+locationUrl: https://packetpushers.net/podcasts/heavy-networking/hn-759-deploying-the-bgp-monitoring-protocol-bmp-at-isp-scale/
+image: /speaker/20241113_hn759-deploying-bmp-at-isp-scale/images/hn759-artwork.png
 links:
   - name: Episode page
-    url: "https://packetpushers.net/podcasts/heavy-networking/hn-759-deploying-the-bgp-monitoring-protocol-bmp-at-isp-scale/"
+    url: https://packetpushers.net/podcasts/heavy-networking/hn-759-deploying-the-bgp-monitoring-protocol-bmp-at-isp-scale/
   - name: Apple Podcasts
-    url: "https://podcasts.apple.com/us/podcast/heavy-networking/id370842767"
+    url: https://podcasts.apple.com/us/podcast/heavy-networking/id370842767
   - name: Spotify
-    url: "https://open.spotify.com/show/7GlOoc33YmMT9j9hrvKH0y"
+    url: https://open.spotify.com/show/7GlOoc33YmMT9j9hrvKH0y
   - name: Overcast
-    url: "https://overcast.fm/itunes370842767"
+    url: https://overcast.fm/itunes370842767
   - name: PocketCasts
-    url: "https://pca.st/XOMu"
-description: "How Bart designed and built a BMP solution at ISP scale — architecture, challenges with millions of records, and why Kafka was essential."
+    url: https://pca.st/XOMu
+description: How Bart designed and built a BMP solution at ISP scale — architecture, challenges with thousands of records, and why Kafka was essential.
 tags: [
-  "BGP",
-  "BMP",
-  "network monitoring",
-  "ISP",
-  "Kafka",
-  "network automation"
+  BGP,
+  BMP,
+  network monitoring,
+  ISP,
+  Kafka,
+  network automation
 ]
 ---
 

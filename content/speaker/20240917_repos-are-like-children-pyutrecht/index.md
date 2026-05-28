@@ -1,21 +1,21 @@
 ---
-title: "Repos are like children - PyUtrecht 2024"
+title: Repos are like children - PyUtrecht 2024
 date: 2024-09-17
 speakerType: presentation
-location: "PyUtrecht"
-locationUrl: "https://www.meetup.com/pyutrecht/"
-image: "/speaker/20240917_repos-are-like-children-pyutrecht/images/pyutrecht2024.png"
+location: PyUtrecht
+locationUrl: https://www.meetup.com/pyutrecht/
+image: /speaker/20240917_repos-are-like-children-pyutrecht/images/pyutrecht2024.png
 links:
   - name: Video
-    url: "https://drive.google.com/file/d/1XomrwxB4OdmknrYf6MasjhGxZJgJEYNO/view"
+    url: https://drive.google.com/file/d/1XomrwxB4OdmknrYf6MasjhGxZJgJEYNO/view
   - name: Slides
-    url: "https://drive.google.com/file/d/1-jheUXSoFJyEim1-QCK4-CFoKSRMiZ9Z/view?usp=sharing"
-description: "Parenting 101 for repositories — creating, nurturing, and scaling codebases with care."
+    url: https://drive.google.com/file/d/1-jheUXSoFJyEim1-QCK4-CFoKSRMiZ9Z/view?usp=sharing
+description: Parenting 101 for repositories — creating, nurturing, and scaling codebases with care.
 tags: [
-  "Python",
-  "repositories",
-  "lifecycle",
-  "software development",
+  Python,
+  repositories,
+  lifecycle,
+  software development,
 ]
 ---
 

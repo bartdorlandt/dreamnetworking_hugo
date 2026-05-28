@@ -1,21 +1,21 @@
 ---
-title: "The Tale of 2 Henrys and BMP"
+title: The Tale of 2 Henrys and BMP
 date: 2025-03-06
 speakerType: presentation
-location: "DKNOG15"
-locationUrl: "https://events.dknog.dk/event/32/"
-image: "/speaker/20250306_tale-of-two-henrys-and-bmp/images/dknog.png"
+location: DKNOG15
+locationUrl: https://events.dknog.dk/event/32/
+image: /speaker/20250306_tale-of-two-henrys-and-bmp/images/dknog.png
 links:
   - name: Video
-    url: "https://youtu.be/e3OhlqFvwJg?si=JGmz8ATHulvWx-f5"
+    url: https://youtu.be/e3OhlqFvwJg?si=JGmz8ATHulvWx-f5
   - name: Slides
-    url: "https://drive.google.com/file/d/1FrExg3i-Ieh9vLlQq4HXYCXLpS0W7Vzc/view"
-description: "What building cars can teach us about building software and BMP — lessons from Henry Royce and Henry Ford applied to network automation."
+    url: https://drive.google.com/file/d/1FrExg3i-Ieh9vLlQq4HXYCXLpS0W7Vzc/view
+description: What building cars can teach us about building software and BMP — lessons from Henry Royce and Henry Ford applied to network automation.
 tags: [
-  "BGP",
-  "BMP",
-  "network automation",
-  "software development",
+  BGP,
+  BMP,
+  Network Automation,
+  Software Development,
 ]
 ---
 

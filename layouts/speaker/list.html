@@ -27,7 +27,7 @@
                         <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
                     </a>
                     <a href="{{ .RelPermalink }}" class="card-text secondary-font text-decoration-none" style="color: inherit;">
-                        <p>{{ .Summary | plainify | truncate 300 }}</p>
+                        <p>{{ with .Params.description }}{{ . | truncate 300 }}{{ else }}{{ .Summary | plainify | truncate 300 }}{{ end }}</p>
                     </a>
                 </div>
                 <div class="mt-auto post-footer bg-transparent py-3">

@@ -1,21 +1,21 @@
 ---
-title: "BMP - Going beyond show commands and screen scraping"
+title: BMP - Going beyond show commands and screen scraping
 date: 2025-05-30
 speakerType: presentation
-location: "Autocon3"
-locationUrl: "https://networkautomation.forum/autocon3/"
-image: "/speaker/20250530_bmp-going-beyond-show-commands/images/autocon3.png"
+location: Autocon3
+locationUrl: https://networkautomation.forum/autocon3/
+image: /speaker/20250530_bmp-going-beyond-show-commands/images/autocon3.png
 links:
   - name: Video
-    url: "https://youtu.be/MgK2YSfTvD8"
+    url: https://youtu.be/MgK2YSfTvD8
 description: "From screen scraping to BMP: a journey in presenting BGP prefix verification back to the customer."
 tags: [
-  "BGP",
-  "BMP",
-  "network monitoring",
-  "ISP",
-  "Kafka",
-  "network automation"
+  BGP,
+  BMP,
+  network monitoring,
+  ISP,
+  Kafka,
+  network automation
 ]
 ---
 

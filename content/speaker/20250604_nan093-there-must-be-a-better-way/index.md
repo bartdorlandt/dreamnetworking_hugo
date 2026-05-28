@@ -1,27 +1,27 @@
 ---
-title: "There Must Be a Better Way! - Network Automation Nerds"
+title: There Must Be a Better Way! - Network Automation Nerds
 date: 2025-06-04
 speakerType: podcast
-location: "Packet Pushers - Network Automation Nerds"
-locationUrl: "https://packetpushers.net/podcasts/network-automation-nerds/nan093-network-automation-there-must-be-a-better-way/"
-image: "/speaker/20250604_nan093-there-must-be-a-better-way/images/nan093-artwork.png"
+location: Packet Pushers - Network Automation Nerds
+locationUrl: https://packetpushers.net/podcasts/network-automation-nerds/nan093-network-automation-there-must-be-a-better-way/
+image: /speaker/20250604_nan093-there-must-be-a-better-way/images/nan093-artwork.png
 links:
   - name: Episode page
-    url: "https://packetpushers.net/podcasts/network-automation-nerds/nan093-network-automation-there-must-be-a-better-way/"
+    url: https://packetpushers.net/podcasts/network-automation-nerds/nan093-network-automation-there-must-be-a-better-way/
   - name: Apple Podcasts
-    url: "https://podcasts.apple.com/us/podcast/network-automation-nerds/id1730980821"
+    url: https://podcasts.apple.com/us/podcast/network-automation-nerds/id1730980821
   - name: Spotify
-    url: "https://open.spotify.com/show/24feK9uvQNAMf71dHqAXBG"
+    url: https://open.spotify.com/show/24feK9uvQNAMf71dHqAXBG
   - name: Overcast
-    url: "https://overcast.fm/itunes1730980821"
+    url: https://overcast.fm/itunes1730980821
   - name: PocketCasts
-    url: "https://pca.st/s8h382t3"
-description: "Bart shares lessons on network automation, why process matters more than tools, and the importance of mentorship."
+    url: https://pca.st/s8h382t3
+description: Bart shares lessons on network automation, why process matters more than tools, and the importance of mentorship.
 tags: [
-  "network automation",
-  "podcast",
-  "mentorship",
-  "self-improvement"
+  network automation,
+  podcast,
+  mentorship,
+  self-improvement
 ]
 ---
 
