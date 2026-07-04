@@ -47,4 +47,4 @@ tasks:
     desc: Serve the site
     cmd: |
       open http://localhost:1313/
-      hugo serve --buildDrafts
+      hugo serve --buildDrafts --buildFuture
