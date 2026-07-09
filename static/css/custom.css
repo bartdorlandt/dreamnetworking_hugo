@@ -171,8 +171,14 @@ h1, h2, h3, h4, h5, h6,
     object-fit: contain;
 }
 
-/* ----- Speaker single page featured image ----- */
+/* ----- Blog featured image: cap height so tall/portrait images don't dominate ----- */
 #single .featured-image img {
+    max-height: 450px;
+    object-fit: contain;
+}
+
+/* ----- Speaker single page featured image ----- */
+#single.speaker .featured-image img {
     max-height: 300px;
     object-fit: contain;
 }
@@ -415,12 +421,12 @@ footer .terms-link:hover {
 }
 
 /* ----- Code blocks — nord theme override ----- */
-#single .page-content pre {
+body #single .page-content pre {
     background-color: #2e3440 !important;
     color: #d8dee9 !important;
 }
 
-#single .page-content pre > code {
+body #single .page-content pre > code {
     color: #d8dee9 !important;
 }
 
