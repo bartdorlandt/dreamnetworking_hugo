@@ -171,6 +171,12 @@ h1, h2, h3, h4, h5, h6,
     object-fit: contain;
 }
 
+/* ----- Blog featured image: cap height so tall/portrait images don't dominate ----- */
+#single .featured-image img {
+    max-height: 450px;
+    object-fit: contain;
+}
+
 /* ----- Speaker single page featured image ----- */
 #single.speaker .featured-image img {
     max-height: 300px;

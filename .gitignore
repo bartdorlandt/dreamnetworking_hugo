@@ -4,3 +4,4 @@
 *.old
 .hugo_build.lock
 /todo*
+.gstack/
