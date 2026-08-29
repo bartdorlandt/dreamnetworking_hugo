@@ -1,6 +1,7 @@
 ---
 title: "Terms and Conditions"
 date: 2026-03-18
+description: "Terms and conditions for Dream Networking & Automation — all engagements are governed by the NLdigital Terms and Conditions 2020, available in Dutch and English."
 tags: []
 toc: false
 socialShare: false

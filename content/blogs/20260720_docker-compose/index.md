@@ -3,6 +3,8 @@ title: "Docker Compose: A Complete Guide"
 date: 2026-07-20
 description: "A complete guide to Docker Compose: file syntax, networking, healthchecks, scaling, security hardening, CI/CD integration, and advanced patterns."
 image: "/blogs/20260720_docker-compose/images/docker_compose.png"
+images:
+  - "/blogs/20260720_docker-compose/images/docker_compose.png"
 tags:
   - docker
   - docker-compose
