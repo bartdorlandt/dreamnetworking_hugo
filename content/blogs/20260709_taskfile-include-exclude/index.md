@@ -3,6 +3,8 @@ title: "Taskfile inheritance: includes, excludes, and overriding tasks"
 date: 2026-07-09
 description: "How to share a common Taskfile across projects, selectively exclude tasks, and override them with project-specific behaviour."
 image: "/blogs/20260709_taskfile-include-exclude/images/taskfile_inherit.png"
+images:
+  - "/blogs/20260709_taskfile-include-exclude/images/taskfile_inherit.png"
 tags:
   - taskfile
   - docker-compose

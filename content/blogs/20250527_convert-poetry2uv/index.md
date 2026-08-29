@@ -3,6 +3,8 @@ title: "Convert poetry to uv"
 date: 2025-05-27
 description: "convert_poetry2uv; a tool to migrate your existing poetry based repositories to be easily migrated to uv."
 image: "/blogs/20250527_convert-poetry2uv/images/poetry2uv.png"
+images:
+  - "/blogs/20250527_convert-poetry2uv/images/poetry2uv.png"
 tags:
   - python
   - poetry

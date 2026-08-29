@@ -73,8 +73,11 @@ security:
 
 params:
   title: ""
-  description: "Dream Networking & Automation — connecting people and automating workflows"
+  description: "Dream Networking & Automation helps businesses simplify complex infrastructure through smart network automation — reducing manual errors, improving reliability, and empowering teams to take ownership."
   favicon: "/images/Favicon_blue.png"
+  # Default social share image (Open Graph / Twitter cards). 1200x630.
+  images:
+    - "/images/og-image.png"
 
   useBootstrapCDN: false
   mathjax: false

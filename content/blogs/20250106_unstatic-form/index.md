@@ -1,6 +1,7 @@
 ---
 title: "Contact form made simple"
 date: 2025-01-06
+description: "Adding a working contact form to a static site without writing backend code, using Un-static to collect submissions and forward them straight to your inbox."
 tags:
   - website
   - un-static
