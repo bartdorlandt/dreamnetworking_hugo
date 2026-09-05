@@ -45,6 +45,7 @@ tasks:
 
   serve:
     desc: Serve the site
+    aliases: [present]
     cmd: |
       open http://localhost:1313/
       hugo serve --buildDrafts --buildFuture

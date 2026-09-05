@@ -9,6 +9,8 @@ description: NLNAM is the Dutch meetup for engineers turning networks into code 
 links:
   - name: Video
     url: https://www.youtube.com/live/G3VcedI-UR8?si=43EuJawV3w70f8de&t=12658
+  - name: Slides
+    url: https://github.com/bartdorlandt/NLNAM_pitch/tree/main/presentation
 tags: [
   NLNAM,
   network automation,

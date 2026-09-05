@@ -9,6 +9,8 @@ description: Bart shares his personal system for managing mail and documents, us
 links:
   - name: Video
     url: https://youtu.be/dcZJ2NL41Os
+  - name: Slides
+    url: https://github.com/bartdorlandt/store_route_mail_like_a_pro/tree/main/export
 tags: [
   Python,
   Paperless,

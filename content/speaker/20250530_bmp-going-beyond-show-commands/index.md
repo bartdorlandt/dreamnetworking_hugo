@@ -8,6 +8,8 @@ image: /speaker/20250530_bmp-going-beyond-show-commands/images/autocon3.png
 links:
   - name: Video
     url: https://youtu.be/MgK2YSfTvD8
+  - name: Slides
+    url: https://docs.google.com/presentation/d/1yXJGIh7P3dQC5zANRpZ_kCYxcAkj11F1SnUAFGDwQSM/edit?usp=sharing
 description: "From screen scraping to BMP: a journey in presenting BGP prefix verification back to the customer."
 tags: [
   BGP,

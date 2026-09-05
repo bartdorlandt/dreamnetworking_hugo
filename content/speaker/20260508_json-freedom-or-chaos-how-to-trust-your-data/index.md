@@ -9,6 +9,8 @@ description: Bart explores the challenges and best practices for managing JSON d
 links:
   - name: Video
     url: https://youtu.be/dcZJ2NL41Os
+  - name: Slides
+    url: https://github.com/bartdorlandt/json_freedom_or_chaos/tree/main/export
 tags: [
   Python,
   JSON,

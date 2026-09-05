@@ -7,7 +7,9 @@ locationUrl: "https://pygrunn.org/"
 image: "/speaker/20250516_repos-are-like-children-pygrunn/images/pygrunn.png"
 links:
   - name: Video
-    url: "https://www.youtube.com/watch?v=Kc8fDYP5cJU"
+    url: https://www.youtube.com/watch?v=Kc8fDYP5cJU
+  - name: Slides
+    url: https://docs.google.com/presentation/d/1dfVU47X4bd5C80w59k54UFRmAoo82JuVoxUVjA29HkY/edit?usp=sharing
 description: "Having a project is much like raising a child — a walk through repository lifecycle, tooling, and growing code with confidence."
 tags: [
   "Python",
