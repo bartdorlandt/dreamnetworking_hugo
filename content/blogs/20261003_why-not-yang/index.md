@@ -29,7 +29,7 @@ So I looked into it. YANG is a data modeling language, and it can validate JSON 
 
 ## What I found
 
-**It can process JSON, but it is strict about it.** YANG expects JSON in the RFC 7951 encoding. Since the JSONs in my  case have some history, it is fairly well possible it doesn't match on all the constraints given by the RFC.
+**It can process JSON, but it is strict about it.** YANG may expect the JSON to be very strict (double quotes, instead of single quotes and perhaps more), see RFC 7951. Since the JSONs in my case have some history, it is fairly well possible it doesn't match on all the constraints given by the RFC. I haven't tested this myself.
 
 **Pydantic gives clearer error messages.** When validation fails, I want to see what's wrong and where, right away. From what I've found, Pydantic does this better. YANG errors, especially from `must` statements written in XPath, are harder to read and debug.
 
