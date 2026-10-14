@@ -4,9 +4,11 @@ date: 2026-10-02
 speakerType: presentation
 location: CPH^Automate
 locationUrl: https://cph-automate.network/
-image: /speaker/20261002_json-freedom-or-chaos-cph-automate/images/cphautomate.png
+image: /speaker/20261002_json-freedom-or-chaos-cph-automate/images/present.png
 description: A real-world journey from chaos to confidence. How "freedom" data undermines automation, and how Pydantic and pytest help build trust in your data by failing fast.
 links:
+  - name: Video
+    url: https://videos.ida.dk/playlist/dedicated/1_dvedo4sy/1_5e1zq7n7
   - name: Slides
     url: https://github.com/bartdorlandt/json_freedom_or_chaos/blob/main/presentation/json_freedom_or_chaos_cphautomate.pdf
   - name: Follow-up blog
@@ -27,4 +29,4 @@ In this talk we'll take a real life use case where the flexibility desires and t
 
 It is a technical talk how we recognise changes are desired, validation is required for trust to grow. Pydantic and pytest are used to work towards a solution where failing fast is a main objective.
 
-The video recording is still to be released. I'll add the link here once it's available.
+<p align="center"><img src="images/cphautomate.png" alt="JSON - freedom or chaos, CPH^Automate title slide" width="600"></p>
