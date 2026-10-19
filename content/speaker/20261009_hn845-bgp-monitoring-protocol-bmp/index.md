@@ -1,5 +1,5 @@
 ---
-title: HN845 - Real Life Use Cases for BGP Monitoring Protocol (BMP) - Heavy Networking
+title: Real Life Use Cases for BGP Monitoring Protocol (BMP) - Heavy Networking
 date: 2026-10-09
 speakerType: podcast
 location: Heavy Networking (Packet Pushers)
