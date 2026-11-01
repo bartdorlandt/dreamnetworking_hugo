@@ -37,10 +37,10 @@ Since the start I've experience several companies and projects. Each with their 
 
 Next to that I've became more active in the community. Mainly in the last 2 years
 
-🔹 Written a whole bunch of linkedin posts<br/>
-🔹 Written several blog posts<br/>
-🔹 Presented at several events in the space of Network Automation and Python<br/>
-🔹 Participated on several podcasts<br/>
+🔹 Increased my linkedin presence<br/>
+🔹 Written blog posts<br/>
+🔹 Presented at events in the space of Network Automation and Python<br/>
+🔹 Been a guest on podcasts<br/>
 
 The real fun has been the side quests: I became a co-host for PyUtrecht and started my own event: NLNAM (NL Network Automation Meetup). Since this year I've been selected to the Network Automation Forum Advisory Board.
 
