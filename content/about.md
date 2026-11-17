@@ -37,7 +37,7 @@ Through all of it, one thread runs constant: I love working with teams. I believ
 
 Knowledge hoarded is knowledge wasted. I've always believed that the best way to grow — personally and as a community — is to share openly. That's why I organize [NLNAM](https://net-auto.nl/), the Network Automation Meetup in the Netherlands, bringing together practitioners of all levels every quarter to swap stories, ideas and hard-won lessons.
 
-It's also why I've spoken at conferences like Autocon3, PyGrunn and DKNOG, and appeared on podcasts like Packet Pushers. If something clicked for me, chances are it'll click for someone else too.
+It's also why I've spoken at conferences like Autocon, PyGrunn and DKNOG, and appeared on podcasts like Packet Pushers. If something clicked for me, chances are it'll click for someone else too.
 
 ---
 
