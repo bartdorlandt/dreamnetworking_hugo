@@ -53,5 +53,5 @@ Here's to the next 5. 🥂
 Check out the podcasts, blogs and events I've been involved in:
 - [Podcasts & public speaking](/speaker)
 - [Blogs](/blogs)
-- Events: [NLNAM](https://nlnam.nl) and [PyUtrecht](https://www.meetup.com/pyutrecht/)
+- Events: [NLNAM](https://net-auto.nl) and [PyUtrecht](https://www.meetup.com/pyutrecht/)
 
