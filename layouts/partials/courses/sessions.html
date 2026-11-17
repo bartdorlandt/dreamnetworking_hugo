@@ -1,0 +1,24 @@
+{{/* Collect upcoming sessions (build time) from the given course pages.
+     Usage: partial "courses/sessions.html" (dict "pages" $pages) -> slice of dicts sorted by date */}}
+{{ $today := now.Format "2006-01-02" }}
+{{ $rows := slice }}
+{{ range .pages }}
+  {{ $course := . }}
+  {{ range .Params.sessions }}
+    {{ $date := time.AsTime .date }}
+    {{ $iso := $date.Format "2006-01-02" }}
+    {{ if ge $iso $today }}
+      {{ $rows = $rows | append (dict
+        "iso" $iso
+        "date" $date
+        "time" .time
+        "format" .format
+        "location" .location
+        "pretix" .pretix
+        "url" .url
+        "course" $course
+      ) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return sort $rows "iso" }}

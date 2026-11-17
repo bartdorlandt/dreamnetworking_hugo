@@ -1,0 +1,67 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Params.description }}">
+<link rel="stylesheet" href="{{ (printf "%scss/list.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
+{{ end }}
+
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+{{ $sessions := partial "courses/sessions.html" (dict "pages" .Pages) }}
+<div class="container pt-5 courses" id="list-page">
+  <h2 class="text-center pb-2">{{ .Title }}</h2>
+  <div class="row justify-content-center">
+    <div class="col-lg-9">
+
+      <div class="courses-intro mb-5">{{ .Content }}</div>
+
+      <h3 class="mb-3">Upcoming dates</h3>
+      <div class="table-responsive">
+        <table class="table course-table align-middle">
+          <thead>
+            <tr><th>Date</th><th>Course</th><th>Location</th><th>Spots</th><th></th></tr>
+          </thead>
+          <tbody>
+            {{ range $sessions }}
+            <tr data-date="{{ .iso }}">
+              <td class="text-nowrap">{{ .date | time.Format ":date_medium" }}</td>
+              <td><a href="{{ .course.RelPermalink }}">{{ .course.Title }}</a>{{ with .format }}<div class="small text-muted">{{ . }}</div>{{ end }}</td>
+              <td>{{ .location }}</td>
+              {{ partial "courses/spots.html" . }}
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+      <p class="course-empty{{ if $sessions }} d-none{{ end }}">No dates planned right now. <a href="/#contact">Get in touch</a> to hear about the next one, or to book a course for your team.</p>
+
+      <h3 class="mt-5 mb-3">All courses</h3>
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr><th>Course</th><th>Level</th><th>Duration</th></tr>
+          </thead>
+          <tbody>
+            {{ range .Pages.ByTitle }}
+            <tr>
+              <td><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.description }}<div class="small text-muted">{{ . }}</div>{{ end }}</td>
+              <td>{{ .Params.level }}</td>
+              <td class="text-nowrap">{{ .Params.duration }}</td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="mt-5 mb-3">Training for your team</h3>
+      <p>Every course is also available in-company, on site or remote. We adapt it to your network: your platforms, your source of truth and your use cases. <a href="/#contact">Request a course for your team</a>.</p>
+
+      <h3 class="mt-5 mb-3">Questions?</h3>
+      <p class="mb-5">Group size, what to bring, language, invoices: see the <a href="/courses/faq/">frequently asked questions</a>.</p>
+
+    </div>
+  </div>
+</div>
+{{ partial "courses/script.html" . }}
+{{ end }}

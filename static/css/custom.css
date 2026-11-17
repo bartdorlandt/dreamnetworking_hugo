@@ -595,3 +595,58 @@ pre:hover .copy-code-btn {
         margin-right: 0;
     }
 }
+
+/* ----- Courses ----- */
+.courses .course-table th,
+.courses .course-table td {
+    color: #01038A;
+}
+
+.courses .course-spots .course-few {
+    color: #d97706;
+    font-weight: 600;
+}
+
+.courses .course-spots .course-full {
+    color: #6c757d;
+}
+
+.courses .course-faq details {
+    border-bottom: 1px solid #F0F4FF;
+    padding: 0.75rem 0;
+}
+
+.courses .course-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #01038A;
+}
+
+.courses .course-faq details p {
+    margin: 0.5rem 0 0;
+}
+
+/* Course sidebar values (price, language) keep their own casing */
+.courses .speaker-meta-label {
+    text-transform: none;
+}
+
+/* Book button: brand blue, like the home page preview buttons.
+   #single selectors beat the theme's "#single .page-content a" link colour. */
+.courses .course-book-btn,
+#single .page-content a.course-book-btn {
+    background-color: #0085FC !important;
+    border-color: #0085FC !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+.courses .course-book-btn:hover,
+#single .page-content a.course-book-btn:hover {
+    background-color: #01038A !important;
+    border-color: #01038A !important;
+}
+
+#single .page-content a.course-book-btn::after {
+    display: none;
+}
