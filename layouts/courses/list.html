@@ -26,7 +26,7 @@
             {{ range $sessions }}
             <tr data-date="{{ .iso }}">
               <td class="text-nowrap">{{ .date | time.Format ":date_medium" }}</td>
-              <td><a href="{{ .course.RelPermalink }}">{{ .course.Title }}</a>{{ with .format }}<div class="small text-muted">{{ . }}</div>{{ end }}</td>
+              <td><a href="{{ .course.RelPermalink }}">{{ .course.Title }}</a>{{ with .format }}<div class="small text-muted">{{ . }}</div>{{ end }}{{ with .price }}<div class="small text-muted">{{ . }}</div>{{ end }}</td>
               <td>{{ .location }}</td>
               {{ partial "courses/spots.html" . }}
             </tr>
@@ -57,8 +57,11 @@
       <h3 class="mt-5 mb-3">Training for your team</h3>
       <p>Every course is also available in-company, on site or remote. We adapt it to your network: your platforms, your source of truth and your use cases. <a href="/#contact">Request a course for your team</a>.</p>
 
+      <h3 class="mt-5 mb-3">How the public courses work</h3>
+      <p>Public courses are in person, in the Netherlands, in small groups. You don't need any network equipment: the lab runs on your own laptop with virtual devices, so you keep it afterwards. Each course page lists the level, group size, language and price.</p>
+
       <h3 class="mt-5 mb-3">Questions?</h3>
-      <p class="mb-5">Group size, what to bring, language, invoices: see the <a href="/courses/faq/">frequently asked questions</a>.</p>
+      <p class="mb-5"><a href="/#contact">Get in touch</a>.</p>
 
     </div>
   </div>

@@ -32,7 +32,7 @@
                 <tbody>
                   {{ range $sessions }}
                   <tr data-date="{{ .iso }}">
-                    <td class="text-nowrap">{{ .date | time.Format ":date_medium" }}{{ with .format }}<div class="small text-muted">{{ . }}</div>{{ end }}</td>
+                    <td class="text-nowrap">{{ .date | time.Format ":date_medium" }}{{ with .format }}<div class="small text-muted">{{ . }}</div>{{ end }}{{ with .price }}<div class="small text-muted">{{ . }}</div>{{ end }}</td>
                     <td class="text-nowrap">{{ .time }}</td>
                     <td>{{ .location }}</td>
                     {{ partial "courses/spots.html" . }}
@@ -73,7 +73,21 @@
               <span class="speaker-meta-label">{{ . }}</span>
             </div>
             {{ end }}
-            {{ with .Params.price }}
+            {{/* Lowest upcoming session price, prefixed with "From" when sessions differ */}}
+            {{ $prices := slice }}
+            {{ range $sessions }}{{ with .price }}{{ $prices = $prices | append . }}{{ end }}{{ end }}
+            {{ $prices = uniq $prices }}
+            {{ $price := .Params.price }}
+            {{ if gt (len $prices) 1 }}
+              {{ $lowest := index $prices 0 }}
+              {{ range $prices }}
+                {{ if lt (int (index (findRE `\d+` .) 0)) (int (index (findRE `\d+` $lowest) 0)) }}{{ $lowest = . }}{{ end }}
+              {{ end }}
+              {{ $price = printf "From %s" $lowest }}
+            {{ else if $prices }}
+              {{ $price = index $prices 0 }}
+            {{ end }}
+            {{ with $price }}
             <div class="speaker-meta-item">
               <i class="fas fa-euro-sign speaker-meta-icon"></i>
               <span class="speaker-meta-label">{{ . }}</span>
@@ -82,10 +96,6 @@
             <div class="speaker-meta-item">
               <i class="fas fa-calendar speaker-meta-icon"></i>
               <a href="#dates" class="speaker-meta-label">See dates</a>
-            </div>
-            <div class="speaker-meta-item">
-              <i class="fas fa-circle-question speaker-meta-icon"></i>
-              <a href="/courses/faq/" class="speaker-meta-label">FAQ</a>
             </div>
             <div class="speaker-meta-item">
               <i class="fas fa-arrow-left speaker-meta-icon"></i>

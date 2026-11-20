@@ -153,6 +153,13 @@
     margin-bottom: 0;
 }
 
+.company-service-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: #0085FC;
+    font-weight: 600;
+}
+
 /* ----- Fonts ----- */
 body {
     font-family: "Inter", sans-serif !important;
@@ -609,21 +616,6 @@ pre:hover .copy-code-btn {
 
 .courses .course-spots .course-full {
     color: #6c757d;
-}
-
-.courses .course-faq details {
-    border-bottom: 1px solid #F0F4FF;
-    padding: 0.75rem 0;
-}
-
-.courses .course-faq summary {
-    cursor: pointer;
-    font-weight: 600;
-    color: #01038A;
-}
-
-.courses .course-faq details p {
-    margin: 0.5rem 0 0;
 }
 
 /* Course sidebar values (price, language) keep their own casing */
