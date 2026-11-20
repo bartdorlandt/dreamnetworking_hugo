@@ -21,11 +21,15 @@ languages:
         - identifier: contact
           name: Contact
           url: /#contact
-          weight: 2
+          weight: 8
         - identifier: about
           name: About
           url: /about
           weight: 3
+        - identifier: courses
+          name: Courses
+          url: /courses
+          weight: 2
         - identifier: blog
           name: Blog
           title: Blog posts
@@ -171,9 +175,11 @@ params:
       - title: "Infrastructure Design"
         icon: "fas fa-project-diagram"
         text: "Building reliable, scalable infrastructure that keeps your business running smoothly while supporting growth and innovation in an ever-changing digital landscape."
-      - title: "Connecting People"
+      - title: "Training & Knowledge Sharing"
         icon: "fas fa-people-arrows"
-        text: "We don't just implement solutions - we empower your team with the knowledge and skills needed to maintain and evolve your network infrastructure independently."
+        text: "We don't just implement solutions - we empower your team with the knowledge and skills needed to maintain and evolve your network infrastructure independently. Hands-on courses, public or in-company."
+        link: /courses/
+        linkText: "See courses and dates"
 
   # About — kept for theme compatibility but disabled
   about:

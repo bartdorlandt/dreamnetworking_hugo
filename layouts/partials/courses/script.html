@@ -1,0 +1,44 @@
+<script>
+  // Hide sessions that passed since the last build, then ask pretix for live availability.
+  (function () {
+    var today = new Date().toISOString().slice(0, 10);
+    document.querySelectorAll("tr[data-date]").forEach(function (row) {
+      if (row.dataset.date < today) row.remove();
+    });
+    document.querySelectorAll(".course-table tbody").forEach(function (body) {
+      var empty = body.parentElement.parentElement.querySelector(".course-empty");
+      if (empty && !body.querySelector("tr")) empty.classList.remove("d-none");
+    });
+
+    // pretix widget endpoint: public, CORS-enabled. avail = [code, remaining]; code 100 = available.
+    // "remaining" is only filled when "Show number of tickets left" is enabled in the pretix event.
+    document.querySelectorAll("[data-pretix]").forEach(function (el) {
+      var url = el.dataset.pretix.replace(/\/?$/, "/") + "widget/product_list?lang=en";
+      fetch(url)
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d.error) { el.textContent = "Closed"; return; }
+          var avail = [];
+          d.items_by_category.forEach(function (c) {
+            c.items.forEach(function (i) {
+              if (i.avail) avail.push(i.avail);
+              (i.variations || []).forEach(function (v) { if (v.avail) avail.push(v.avail); });
+            });
+          });
+          var open = avail.filter(function (a) { return a[0] === 100; });
+          if (!open.length) {
+            el.textContent = d.waiting_list_enabled ? "Full, waiting list" : "Sold out";
+            el.classList.add("course-full");
+            return;
+          }
+          var left = open.map(function (a) { return a[1]; }).filter(function (n) { return n !== null; });
+          if (left.length) {
+            var n = Math.max.apply(null, left);
+            el.textContent = n === 1 ? "1 spot left" : n + " spots left";
+            if (n <= 3) el.classList.add("course-few");
+          }
+        })
+        .catch(function () { /* keep the build-time label */ });
+    });
+  })();
+</script>

@@ -1,0 +1,111 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Params.description }}">
+<link rel="stylesheet" href="{{ (printf "%scss/single.css" (.Site.Params.staticPath | default "")) | relURL }}">
+<!-- fontawesome -->
+<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+{{ end }}
+
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+{{ $sessions := partial "courses/sessions.html" (dict "pages" (slice .)) }}
+<section id="single" class="speaker courses">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">{{ .Title }}</h1>
+            {{ with .Params.description }}<p class="text-center lead">{{ . }}</p>{{ end }}
+          </div>
+          <article class="page-content p-2">
+            {{ .Content | emojify }}
+
+            <h2 id="dates">Dates</h2>
+            <div class="table-responsive">
+              <table class="table course-table align-middle">
+                <thead>
+                  <tr><th>Date</th><th>Time</th><th>Location</th><th>Spots</th><th></th></tr>
+                </thead>
+                <tbody>
+                  {{ range $sessions }}
+                  <tr data-date="{{ .iso }}">
+                    <td class="text-nowrap">{{ .date | time.Format ":date_medium" }}{{ with .format }}<div class="small text-muted">{{ . }}</div>{{ end }}{{ with .price }}<div class="small text-muted">{{ . }}</div>{{ end }}</td>
+                    <td class="text-nowrap">{{ .time }}</td>
+                    <td>{{ .location }}</td>
+                    {{ partial "courses/spots.html" . }}
+                  </tr>
+                  {{ end }}
+                </tbody>
+              </table>
+            </div>
+            <p class="course-empty{{ if $sessions }} d-none{{ end }}">No dates planned right now. <a href="/#contact">Get in touch</a> to hear about the next one.</p>
+            <p>Want this course for your team, on your own network? <a href="/#contact">Request an in-company course</a>.</p>
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          <aside class="speaker-meta mb-4">
+            {{ with .Params.level }}
+            <div class="speaker-meta-item">
+              <i class="fas fa-signal speaker-meta-icon"></i>
+              <span class="speaker-meta-label">{{ . }}</span>
+            </div>
+            {{ end }}
+            {{ with .Params.duration }}
+            <div class="speaker-meta-item">
+              <i class="fas fa-clock speaker-meta-icon"></i>
+              <span class="speaker-meta-label">{{ . }}</span>
+            </div>
+            {{ end }}
+            {{ with .Params.language }}
+            <div class="speaker-meta-item">
+              <i class="fas fa-language speaker-meta-icon"></i>
+              <span class="speaker-meta-label">{{ . }}</span>
+            </div>
+            {{ end }}
+            {{ with .Params.groupSize }}
+            <div class="speaker-meta-item">
+              <i class="fas fa-users speaker-meta-icon"></i>
+              <span class="speaker-meta-label">{{ . }}</span>
+            </div>
+            {{ end }}
+            {{/* Lowest upcoming session price, prefixed with "From" when sessions differ */}}
+            {{ $prices := slice }}
+            {{ range $sessions }}{{ with .price }}{{ $prices = $prices | append . }}{{ end }}{{ end }}
+            {{ $prices = uniq $prices }}
+            {{ $price := .Params.price }}
+            {{ if gt (len $prices) 1 }}
+              {{ $lowest := index $prices 0 }}
+              {{ range $prices }}
+                {{ if lt (int (index (findRE `\d+` .) 0)) (int (index (findRE `\d+` $lowest) 0)) }}{{ $lowest = . }}{{ end }}
+              {{ end }}
+              {{ $price = printf "From %s" $lowest }}
+            {{ else if $prices }}
+              {{ $price = index $prices 0 }}
+            {{ end }}
+            {{ with $price }}
+            <div class="speaker-meta-item">
+              <i class="fas fa-euro-sign speaker-meta-icon"></i>
+              <span class="speaker-meta-label">{{ . }}</span>
+            </div>
+            {{ end }}
+            <div class="speaker-meta-item">
+              <i class="fas fa-calendar speaker-meta-icon"></i>
+              <a href="#dates" class="speaker-meta-label">See dates</a>
+            </div>
+            <div class="speaker-meta-item">
+              <i class="fas fa-arrow-left speaker-meta-icon"></i>
+              <a href="{{ .Parent.RelPermalink }}" class="speaker-meta-label">All courses</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ partial "courses/script.html" . }}
+{{ end }}

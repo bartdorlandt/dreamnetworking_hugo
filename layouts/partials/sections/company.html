@@ -50,6 +50,7 @@
           </div>
           <h5 class="company-service-title">{{ .title }}</h5>
           <p class="company-service-text">{{ .text }}</p>
+          {{ if .link }}<a href="{{ .link | relURL }}" class="company-service-link">{{ .linkText | default "Read more" }} &rarr;</a>{{ end }}
         </div>
       </div>
       {{ end }}

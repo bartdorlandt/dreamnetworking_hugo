@@ -1,0 +1,16 @@
+{{/* Spots cell + booking button for one session. Context: session dict from courses/sessions.html */}}
+{{ $book := or .pretix .url }}
+<td class="course-spots">
+  {{ if .pretix }}
+  <span data-pretix="{{ .pretix }}">Available</span>
+  {{ else if .url }}
+  <span>Available</span>
+  {{ else }}
+  <span class="text-muted">Sign-up opens soon</span>
+  {{ end }}
+</td>
+<td class="course-book text-end">
+  {{ with $book }}
+  <a href="{{ . }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm course-book-btn">Book</a>
+  {{ end }}
+</td>

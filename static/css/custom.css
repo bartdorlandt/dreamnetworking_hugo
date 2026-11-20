@@ -153,6 +153,13 @@
     margin-bottom: 0;
 }
 
+.company-service-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: #0085FC;
+    font-weight: 600;
+}
+
 /* ----- Fonts ----- */
 body {
     font-family: "Inter", sans-serif !important;
@@ -406,6 +413,15 @@ footer .terms-link:hover {
     text-decoration: underline;
 }
 
+/* ----- Search input: visible outline (theme sets border = background) ----- */
+#search {
+    border: 1px solid color-mix(in srgb, var(--text-color) 35%, transparent) !important;
+}
+
+#search:focus {
+    border-color: var(--primary-color) !important;
+}
+
 /* ----- Search results dropdown ----- */
 #search-content {
     font-size: 0.93rem;
@@ -594,4 +610,44 @@ pre:hover .copy-code-btn {
         width: 100%;
         margin-right: 0;
     }
+}
+
+/* ----- Courses ----- */
+.courses .course-table th,
+.courses .course-table td {
+    color: #01038A;
+}
+
+.courses .course-spots .course-few {
+    color: #d97706;
+    font-weight: 600;
+}
+
+.courses .course-spots .course-full {
+    color: #6c757d;
+}
+
+/* Course sidebar values (price, language) keep their own casing */
+.courses .speaker-meta-label {
+    text-transform: none;
+}
+
+/* Book button: brand blue, like the home page preview buttons.
+   #single selectors beat the theme's "#single .page-content a" link colour. */
+.courses .course-book-btn,
+#single .page-content a.course-book-btn {
+    background-color: #0085FC !important;
+    border-color: #0085FC !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+.courses .course-book-btn:hover,
+#single .page-content a.course-book-btn:hover {
+    background-color: #01038A !important;
+    border-color: #01038A !important;
+}
+
+#single .page-content a.course-book-btn::after {
+    display: none;
 }
