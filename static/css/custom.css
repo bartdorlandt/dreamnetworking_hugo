@@ -413,6 +413,15 @@ footer .terms-link:hover {
     text-decoration: underline;
 }
 
+/* ----- Search input: visible outline (theme sets border = background) ----- */
+#search {
+    border: 1px solid color-mix(in srgb, var(--text-color) 35%, transparent) !important;
+}
+
+#search:focus {
+    border-color: var(--primary-color) !important;
+}
+
 /* ----- Search results dropdown ----- */
 #search-content {
     font-size: 0.93rem;
